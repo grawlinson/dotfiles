@@ -1,0 +1,20 @@
+Host biblioteca.me
+	HostName biblioteca.me
+	Port port
+	User user
+	IdentityFile /path/to/ssh/key
+
+Host aur.archlinux.org
+	HostName aur.archlinux.org
+	User aur
+	IdentityFile /path/to/ssh/key
+
+Host bitbucket.org
+	User git
+	HostName bitbucket.org
+	IdentityFile /path/to/ssh/key
+
+Host github.com gist.github.com
+	User git
+	HostName github.com
+	IdentityFile /path/to/ssh/key
