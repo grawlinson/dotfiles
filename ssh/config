@@ -1,3 +1,8 @@
+Host *
+	UseRoaming no
+	IdentitiesOnly yes
+	Compression yes
+
 Host biblioteca.me
 	HostName biblioteca.me
 	Port port
