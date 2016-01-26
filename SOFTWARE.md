@@ -6,6 +6,13 @@
 *   LibreOffice
 *   VLC
 *   Thunderbird
+*   ownCloud client
+*   KeepassX2
+*   Calibre
+*   PulseAudio+pavucontrol
+*   Evince
+*   Fonts (infinality-bundle ibfonts-meta-extended)
+*   LaTeX (texlive-most)
 
 ## Browsers
 
@@ -46,12 +53,3 @@
 *   npm
 *   ssh-agent
 *   alert
-
-## Utilities
-
-*   Thunderbird
-*   ownCloud client
-*   KeepassX2
-*   Calibre
-*   PulseAudio+pavucontrol
-*   Evince

@@ -17,14 +17,9 @@
 
 Refactor the following:
 
-*   SSH
 *   Weechat
 
 Create shell scripts that automatically:
 
 *   Installs software from repositories
 *   Sets up UI
-
-Delete this repository.
-
-Remove credentials.
