@@ -26,5 +26,7 @@ Create a symlink for `.zlogin`
 
 `ln -s zlogin ~/.zlogin`
 
+Add .zsh files to ~/.oh-my-zsh/custom
+
 [1]: https://github.com/robbyrussell/oh-my-zsh
 [2]: https://github.com/zsh-users/zsh-completions

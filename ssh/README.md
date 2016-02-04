@@ -9,3 +9,7 @@ Create SSH directory & copy config there.
 Generate SSH key(s)
 
 `ssh-keygen -t rsa -b 4096 -C "comment" -f /path/to/ssh/key`
+
+## TODO
+
+Update config variables with proper variables (user/port/keys)

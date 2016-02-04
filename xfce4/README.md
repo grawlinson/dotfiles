@@ -16,6 +16,7 @@
 
 *   Numix Theme
 *   Numix Icons
+*   Numix notifications
 *   Topmenu Panel. Ensure this works properly. ([Reference][5])
 *   Docky
 
