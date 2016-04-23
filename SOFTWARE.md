@@ -32,11 +32,13 @@
 *   npm
 *   MongoDB
 *   PostgreSQL
+*   Go
 
 ### Global NPM packages
 
 *   ESLint
 *   Nodemon
+*   Go-mon
 
 ## Terminal
 
@@ -47,9 +49,11 @@
 *   HTOP
 *   LFTP
 *   VIM + plugins
+*   unzip
 
 ### ZSH plugins
 
 *   npm
 *   ssh-agent
 *   alert
+*   go

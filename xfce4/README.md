@@ -27,13 +27,13 @@ DOCKY TODO:
 
 Create a symlink for `.xinitrc`
 
-`ln -s xinitrc ~/.xinitrc`
+`ln -s ~/.dotfiles/xfce4/xinitrc ~/.xinitrc`
 
 Create folders for terminal settings & symlink `terminalrc`
 
 `mkdir -p ~/.config/xfce4/terminal`
 
-`ln -s terminalrc ~/.config/xfce4/terminal/terminalrc`
+`ln -s ~/.dotfiles/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc`
 
 Install Numix Theme + Docky
 
@@ -51,7 +51,7 @@ Install Icons + Topmenu. After clone, enter each directory & `makepkg -sri`
 
 Create a symlink for `.gtkrc-2.0`
 
-`ln -s gtk-2.0 ~/.gtkrc-2.0`
+`ln -s ~/.dotfiles/xfce4/gtk-2.0 ~/.gtkrc-2.0`
 
 [1]: https://wiki.archlinux.org/index.php/xinitrc#Configuration
 [2]: https://bbs.archlinux.org/viewtopic.php?id=203164

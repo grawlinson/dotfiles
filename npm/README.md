@@ -9,11 +9,11 @@ Create directory for global packages
 
 Create a symlink for `.npmrc`
 
-`ln -s npmrc ~/.npmrc`
+`ln -s ~/.dotfiles/npm/npmrc ~/.npmrc`
 
 Shell wizardry
 
-`ln -s npm.zsh ~/.oh-my-zsh/custom/npm.zsh`
+`ln -s ~/.dotfiles/npm/npm.zsh ~/.oh-my-zsh/custom/npm.zsh`
 
 [1]: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 [2]: https://docs.npmjs.com/misc/config#save-exact

@@ -16,4 +16,6 @@ autoload -U compinit && compinit
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export EDITOR=/usr/bin/vim
+
 source $ZSH/oh-my-zsh.sh

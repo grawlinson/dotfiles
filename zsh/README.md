@@ -20,13 +20,17 @@ Install zsh-completions plugin
 
 Create a symlink for `.zshrc`
 
-`ln -s zshrc ~/.zshrc`
+`ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc`
 
 Create a symlink for `.zlogin`
 
-`ln -s zlogin ~/.zlogin`
+`ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin`
 
 Add .zsh files to ~/.oh-my-zsh/custom
+
+`ln -s ~/.dotfiles/zsh/alert.zsh ~/.oh-my-zsh/custom/alert.zsh`
+
+`ln -s ~/.dotfiles/zsh/ssh-agent.zsh ~/.oh-my-zsh/custom/ssh-agent.zsh`
 
 [1]: https://github.com/robbyrussell/oh-my-zsh
 [2]: https://github.com/zsh-users/zsh-completions

@@ -22,12 +22,12 @@
 
 Create a symlink for `.lftprc`
 
-`ln -s lftprc ~/.lftprc`
+`ln -s ~/.dotfiles/lftp/lftprc ~/.lftprc`
 
 Create folders for bookmarks & symlink `bookmarks`.
 
 `mkdir -p ~/.lftp`
 
-`ln -s bookmarks ~/.lftp/bookmarks`
+`ln -s ~/.dotfiles/lftp/bookmarks ~/.lftp/bookmarks`
 
 [1]: http://lftp.yar.ru/lftp-man.html
