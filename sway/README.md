@@ -7,6 +7,7 @@
 * sway
 * i3status
 * ttf-font-icons
+* rxvt-unicode
 
 ## Setup
 
@@ -14,6 +15,8 @@
 
 ``ln -s ~/.dotfiles/sway/sway.config ~/.config/sway/config``
 
-``ln -s ~/dotfiles/sway.i3status.config ~/.config/i3status/config``
+``ln -s ~/.dotfiles/sway/i3status.config ~/.config/i3status/config``
+
+``ln -s ~/.dotfiles/sway/Xresources ~/.Xresources``
 
 [1]: https://github.com/SirCmpwn/sway
