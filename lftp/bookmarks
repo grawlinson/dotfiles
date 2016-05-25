@@ -1,1 +1,1 @@
-biblioteca.me	sftp://biblioteca.me/
+host		sftp://username:password@host:port/path/to/dir
