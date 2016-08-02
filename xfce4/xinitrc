@@ -15,4 +15,12 @@ fi
 xscreensaver &
 xsetroot -cursor_name left_ptr &
 
+# Gnome Keyring Daemon
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
+# URXVTD Daemon
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+urxvtd -q -f -o
+
 exec startxfce4
