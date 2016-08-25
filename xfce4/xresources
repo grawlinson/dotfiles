@@ -1,6 +1,7 @@
 URxvt*scrollBar_right: true
 URxvt*font: xft:DejaVu Sans Mono:size=10:antialias=true:hinting=true
 
+! Colours
 URxvt*background: #272822
 URxvt*foreground: #f8f8f2
 URxvt*color0: #272822
@@ -19,3 +20,11 @@ URxvt*color12: #66d9ef
 URxvt*color13: #ae81ff
 URxvt*color14: #a1efe4
 URxvt*color15: #f9f8f5
+
+! Tighter letter spacing
+URxvt.letterSpace: -1
+
+! Perl Extensions: Clickable URLs + Simple Tabs
+URxvt.perl-ext-common: default,matcher,tabbed
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
