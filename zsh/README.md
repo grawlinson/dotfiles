@@ -30,15 +30,5 @@
 
 `ln -s ~/.dotfiles/zsh/steam.zsh ~/.oh-my-zsh/custom/steam.zsh`
 
-## Obsolete
-
-Create a symlink for `.zlogin`
-
-`ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin`
-
-Create a symlink for `ssh-agent.zsh`
-
-`ln -s ~/.dotfiles/zsh/ssh-agent.zsh ~/.oh-my-zsh/custom/ssh-agent.zsh`
-
 [1]: https://github.com/robbyrussell/oh-my-zsh
 [2]: https://github.com/zsh-users/zsh-completions
