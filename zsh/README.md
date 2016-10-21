@@ -24,11 +24,5 @@
 
 `ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc`
 
-### Custom ZSH config
-
-`ln -s ~/.dotfiles/zsh/alert.zsh ~/.oh-my-zsh/custom/alert.zsh`
-
-`ln -s ~/.dotfiles/zsh/steam.zsh ~/.oh-my-zsh/custom/steam.zsh`
-
 [1]: https://github.com/robbyrussell/oh-my-zsh
 [2]: https://github.com/zsh-users/zsh-completions

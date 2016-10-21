@@ -21,8 +21,6 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 
 `ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim`
 
-`ln -s ~/.dotfiles/nvim/nvim.zsh ~/.oh-my-zsh/custom/nvim.zsh`
-
 `nvim +PlugInstall +qall`
 
 [url-nvim]:https://github.com/neovim/neovim

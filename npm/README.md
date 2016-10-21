@@ -11,9 +11,5 @@ Copy `.npmrc`
 
 `cp ~/.dotfiles/npm/npmrc ~/.npmrc`
 
-Shell wizardry
-
-`ln -s ~/.dotfiles/npm/npm.zsh ~/.oh-my-zsh/custom/npm.zsh`
-
 [1]: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 [2]: https://docs.npmjs.com/misc/config#save-exact
