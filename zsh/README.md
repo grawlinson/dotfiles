@@ -5,7 +5,7 @@
 
 ## Install
 
-### ZSH
+### Main package
 
 `pacman -S zsh`
 

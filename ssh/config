@@ -34,6 +34,6 @@ Host github.com gist.github.com
 	IdentityFile /path/to/ssh/key
 
 Host gitlab.com
-    User username
-    HostName gitlab.com
-    IdentityFile /path/to/ssh/key
+	User username
+	HostName gitlab.com
+	IdentityFile /path/to/ssh/key

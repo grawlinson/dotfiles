@@ -9,8 +9,7 @@ DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
 # Plugins
-plugins=(archlinux common-aliases git sudo web-search ssh-agent rust)
-# look into node/npm
+plugins=(archlinux common-aliases git sudo ssh-agent rust)
 
 # ZSH-Completions
 plugins+=(zsh-completions)

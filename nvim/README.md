@@ -2,13 +2,13 @@
 
 Install [nvim][url-nvim] with [vim-plug][url-vim-plug] (plugin manager)
 
-### Plugins
+## Plugins
 
-* [vim-airline][url-vim-airline]
-* [vim-airline-plugins][url-vim-airline-plugins]
-* [vim-monokai][url-vim-monokai]
-* [vim-gitgutter][url-vim-gitgutter]
-* [vim-sensible][url-vim-sensible]
+*   [vim-airline][url-vim-airline]
+*   [vim-airline-plugins][url-vim-airline-plugins]
+*   [vim-monokai][url-vim-monokai]
+*   [vim-gitgutter][url-vim-gitgutter]
+*   [vim-sensible][url-vim-sensible]
 
 ## Installation
 
