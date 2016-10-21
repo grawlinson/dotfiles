@@ -8,6 +8,7 @@ Install [nvim][url-nvim] with [vim-plug][url-vim-plug] (plugin manager)
 * [vim-airline-plugins][url-vim-airline-plugins]
 * [vim-monokai][url-vim-monokai]
 * [vim-gitgutter][url-vim-gitgutter]
+* [vim-sensible][url-vim-sensible]
 
 ## Installation
 
@@ -30,3 +31,4 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 [url-vim-airline-plugins]:https://github.com/vim-airline/vim-airline
 [url-vim-monokai]:https://github.com/sickill/vim-monokai
 [url-vim-gitgutter]:https://github.com/airblade/vim-gitgutter
+[url-vim-sensible]:https://github.com/tpope/vim-sensible
