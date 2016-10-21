@@ -1,32 +1,9 @@
-# Repository for dotfiles & system setup
+# dotfiles & system setup
 
-## UI
+`git clone git@github.com:grawlinson/dotfiles.git ~/.dotfiles`
 
-### General
+Clone repository, then setup as desired.
 
-*   Numix Circle Icons
-*   Docky
+## LICENSE
 
-### XFCE
-
-*   Topmenu
-*   Terminal
-*   Notifications (Numix)
-
-## TODO
-
-Refactor the following:
-
-*   Weechat
-
-Create shell scripts that automatically:
-
-*   Installs software from repositories
-*   Sets up UI
-
-Variables/Functions:
-
-*   DOTFILES_DIR
-*   createFolder(location, folderName) - Backup if exists.
-*   createLink(location, fileName) - Backup if exists.
-*   Backup to: DOTFILES_DIR/BACKUPS (Add folder to gitignore)
+The MIT License ([MIT](LICENSE.md))

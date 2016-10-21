@@ -1,5 +1,8 @@
 # xfce4
 
+**Obsolete**: I've since switched to KDE Plasma 5.
+The X11 files are still useful.
+
 ## General
 
 *   Ensure notifications work properly. ([Reference][2] & [Source][1])

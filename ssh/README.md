@@ -8,7 +8,7 @@ Create SSH directory & copy config there.
 
 Generate SSH key(s)
 
-`ssh-keygen -t rsa -b 4096 -C "comment" -f /path/to/ssh/key`
+`ssh-keygen -t ed25519 -C "comment" -f /path/to/ssh/key`
 
 ## TODO
 

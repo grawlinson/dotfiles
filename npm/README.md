@@ -7,9 +7,9 @@ Create directory for global packages
 
 `mkdir ~/.npm-packages`
 
-Create a symlink for `.npmrc`
+Copy `.npmrc`
 
-`ln -s ~/.dotfiles/npm/npmrc ~/.npmrc`
+`cp ~/.dotfiles/npm/npmrc ~/.npmrc`
 
 Shell wizardry
 
