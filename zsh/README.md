@@ -3,32 +3,40 @@
 *   oh-my-zsh. ([source][1])
 *   zsh-completions plugin. ([source][2])
 
-Install & use zsh
+## Install
+
+### ZSH
 
 `pacman -S zsh`
 
 `chsh -s /bin/zsh`
 
-Install oh-my-zsh
+### oh-my-zsh
 
 `git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh`
 
-Install zsh-completions plugin
+### zsh-completions plugin
 
 `git clone https://github.com/zsh-users/zsh-completions
  ~/.oh-my-zsh/custom/plugins/zsh-completions`
 
-Create a symlink for `.zshrc`
+## Configuration
 
 `ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc`
+
+### Custom ZSH config
+
+`ln -s ~/.dotfiles/zsh/alert.zsh ~/.oh-my-zsh/custom/alert.zsh`
+
+`ln -s ~/.dotfiles/zsh/steam.zsh ~/.oh-my-zsh/custom/steam.zsh`
+
+## Obsolete
 
 Create a symlink for `.zlogin`
 
 `ln -s ~/.dotfiles/zsh/zlogin ~/.zlogin`
 
-Add .zsh files to ~/.oh-my-zsh/custom
-
-`ln -s ~/.dotfiles/zsh/alert.zsh ~/.oh-my-zsh/custom/alert.zsh`
+Create a symlink for `ssh-agent.zsh`
 
 `ln -s ~/.dotfiles/zsh/ssh-agent.zsh ~/.oh-my-zsh/custom/ssh-agent.zsh`
 
