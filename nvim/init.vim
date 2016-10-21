@@ -12,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 
 " Config
 Plug 'tpope/vim-sensible'
+Plug 'chrisbra/sudoedit.vim'
 
 call plug#end()
 
