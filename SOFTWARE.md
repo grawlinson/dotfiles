@@ -4,56 +4,51 @@
 
 *   Calibre
 *   LibreOffice
-*   VLC
+*   mpv
 *   Thunderbird
 *   ownCloud client
 *   KeepassX2
-*   Calibre
 *   PulseAudio+pavucontrol
-*   Evince
 *   Fonts (infinality-bundle ibfonts-meta-extended)
 *   LaTeX (texlive-most)
 
 ## Browsers
 
 *   Chromium
-*   Firefox (Aurora)
+*   Firefox
 
-### Plugins
+### Browser Plugins
 
 *   Reddit Enhancement Suite
 *   uBlock Origin
+*   Wappalyzer
 
 ## Development
 
-*   Postman
-*   Atom Editor
-*   Node.js
+*   postman
+*   insomnia
+*   atom
+*   nodejs
 *   npm
-*   MongoDB
-*   PostgreSQL
-*   Go
+*   mongodb
+*   postgresql
+*   go
 
 ### Global NPM packages
 
-*   ESLint
-*   Nodemon
-*   Go-mon
+*   eslint
+*   nodemon
+*   gulp-cli
+*   yarn
 
 ## Terminal
 
-*   Weechat
-*   ZSH
-*   Screenfetch+scrot
+*   weechat
+*   zsh
+*   screenfetch+scrot
 *   OpenSSH
-*   HTOP
-*   LFTP
-*   VIM + plugins
+*   htop
+*   lftp
+*   nvim
 *   unzip
-
-### ZSH plugins
-
-*   npm
-*   ssh-agent
-*   alert
-*   go
+*   rxvt-unicode
