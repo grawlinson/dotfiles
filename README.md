@@ -1,6 +1,6 @@
 # dotfiles & system setup
 
-```shell
+```
 git            > global git config & aliases
 lftp           > sftp management
 npm            > npm configuration (ha ha)
@@ -16,8 +16,18 @@ zsh            > shell, aliases and cool stuff
 
 Clone repository, then setup as desired.
 
-Look at Makefile, or use GNU Stow directly.
+Look at [Makefile](Makefile), or use [GNU Stow][url-gnu-stow] directly.
+
+## Further Reading
+
+*   [Mozilla OpenSSH security guidelines][url-mozilla-ssh]
+*   [Good read on securing OpenSSH][url-secure-shell]
+
 
 ## LICENSE
 
 The MIT License ([MIT](LICENSE.md))
+
+[url-gnu-stow]:https://www.gnu.org/software/stow/
+[url-mozilla-ssh]:https://wiki.mozilla.org/Security/Guidelines/OpenSSH
+[url-secure-shell]:https://stribika.github.io/2015/01/04/secure-secure-shell.html
