@@ -1,22 +1,22 @@
-.PHONY: help git lftp npm nvim ssh sway urxvt zsh clean
+.PHONY: help git lftp npm nvim ssh sway urxvt wallpapers zsh clean
 
 .DEFAULT: help
 
 help:
-	@echo "all       # Sets up everything"
-	@echo "git       # Sets up default git config"
-	@echo "lftp      # Set up lftp"
-	@echo "npm       # Set up npm"
-	@echo "nvim      # Sets up neovim"
-	@echo "ssh       # Set up ssh"
-	@echo "sway      # Set up sway"
-	@echo "urxvt     # Set up urxvt"
-	@echo "zsh       # Set up zsh"
-	@echo "clean     # deletes absolutely everything"
+	@echo "all            > set up everything"
+	@echo "git            > global git config & aliases"
+	@echo "lftp           > sftp management"
+	@echo "npm            > npm configuration (ha ha)"
+	@echo "nvim           > neovim config & plugins"
+	@echo "ssh            > safe-ish ssh config"
+	@echo "sway           > minimal tiling wm for naughty computers"
+	@echo "urxvt          > terminal colours & keyboard settings"
+	@echo "wallpapers     > system wallpapers"
+	@echo "zsh            > shell, aliases and cool stuff"
 	@echo ""
-	@echo "           mostly, i'm just lazy"
+	@echo "            mostly, i'm just lazy"
 
-all: git lftp npm nvim ssh sway urxvt zsh
+all: git lftp npm nvim ssh sway urxvt wallpapers zsh
 
 git:
 	@stow -t ~/ git
@@ -42,6 +42,9 @@ sway:
 
 urxvt:
 	@stow -t ~/ urxvt
+
+wallpapers:
+	@stow -t ~/ wallpapers
 
 zsh:
 	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
