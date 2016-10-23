@@ -1,5 +1,0 @@
-# Install NPM packages globally without requiring sudo.
-prefix=${HOME}/.npm-packages
-
-# Save exact version instead of a 'loose' version.
-save-exact=true

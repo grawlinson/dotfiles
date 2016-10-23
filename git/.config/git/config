@@ -1,0 +1,5 @@
+[user]
+	email = george@rawlinson.net.nz
+	name = George Rawlinson
+[push]
+	default = simple

@@ -1,0 +1,1 @@
+host	sftp://username:password@host:port/path/to/dir

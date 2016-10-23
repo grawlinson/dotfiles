@@ -1,0 +1,2 @@
+# Save exact version instead of a 'loose' version.
+save-exact=true
