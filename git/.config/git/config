@@ -1,5 +1,23 @@
 [user]
 	email = george@rawlinson.net.nz
 	name = George Rawlinson
+
+[core]
+	# if $EDITOR not set, use this as editor
+	editor = nvim
+	# fix whitespace issues
+	whitespace = fix, blank-at-eol, blank-at-eof, space-before-tab, trailing-space
+
+[color]
+	# automatically color output, except when piping
+	ui = auto
+
+[color "status"]
+	# colours when using status command
+	untracked = magenta
+	changed = red
+	added = green
+
 [push]
+	# push current branch instead of all
 	default = simple
