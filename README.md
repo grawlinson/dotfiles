@@ -7,6 +7,7 @@ npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
 ssh            > safe-ish ssh config
 sway           > minimal tiling wm for naughty computers
+tmux           > tmux config
 urxvt          > terminal colours & keyboard settings
 wallpapers     > system wallpapers
 zsh            > shell, aliases and cool stuff
