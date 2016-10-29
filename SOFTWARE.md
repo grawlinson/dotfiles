@@ -52,3 +52,4 @@
 *   nvim
 *   unzip
 *   rxvt-unicode
+*   tmux

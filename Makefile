@@ -1,4 +1,4 @@
-.PHONY: help git lftp npm nvim ssh sway urxvt wallpapers zsh clean
+.PHONY: help git lftp npm nvim ssh sway tmux urxvt wallpapers zsh clean
 
 .DEFAULT: help
 
@@ -10,13 +10,14 @@ help:
 	@echo "nvim           > neovim config & plugins"
 	@echo "ssh            > safe-ish ssh config"
 	@echo "sway           > minimal tiling wm for naughty computers"
+	@echo "tmux           > tmux config"
 	@echo "urxvt          > terminal colours & keyboard settings"
 	@echo "wallpapers     > system wallpapers"
 	@echo "zsh            > shell, aliases and cool stuff"
 	@echo ""
 	@echo "            mostly, i'm just lazy"
 
-all: git lftp npm nvim ssh sway urxvt wallpapers zsh
+all: git lftp npm nvim ssh sway tmux urxvt wallpapers zsh
 
 git:
 	@stow -t ~/ git
@@ -40,6 +41,10 @@ ssh:
 sway:
 	@stow -t ~/ sway
 
+tmux:
+	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+	@stow -t ~/ tmux
+
 urxvt:
 	@stow -t ~/ urxvt
 
@@ -52,10 +57,11 @@ zsh:
 	@stow -t ~/ zsh
 
 clean:
-	@stow -D git lftp npm nvim ssh sway urxvt zsh
+	@stow -D git lftp npm nvim ssh sway tmux urxvt zsh
 	@rm -rf ~/.config/git \
 		~/.config/lftp ~/.local/share/lftp \
 		~/.config/npm ~/.cache/npm ~/.local/share/npm \
 		~/.config/nvim \
 		~/.config/sway \
+		~/.config/tmux \
 		~/.oh-my-zsh

@@ -31,6 +31,9 @@ URxvt.scrollBar: false
 URxvt.internalBorder: 0
 
 ! Perl Extensions: Clickable URLs + Simple Tabs
-URxvt.perl-ext-common: default,matcher,tabbed
+! URxvt.perl-ext-common: default,matcher,tabbed
+
+! Perl Extensions: Clickable URLs
+URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
