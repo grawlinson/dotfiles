@@ -3,6 +3,8 @@
 ```
 git            > global git config & aliases
 lftp           > sftp management
+mpd            > music player daemon config
+ncmpcpp        > ncurses mpc++ ui/colour settings & playlists
 npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
 ssh            > safe-ish ssh config

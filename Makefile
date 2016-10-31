@@ -1,4 +1,4 @@
-.PHONY: help git lftp npm nvim ssh sway tmux urxvt wallpapers zsh clean
+.PHONY: help git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers zsh clean
 
 .DEFAULT: help
 
@@ -6,6 +6,8 @@ help:
 	@echo "all            > set up everything"
 	@echo "git            > global git config & aliases"
 	@echo "lftp           > sftp management"
+	@echo "mpd            > music player daemon config"
+	@echo "ncmpcpp        > ncurses mpc++ ui/colour settings & playlists"
 	@echo "npm            > npm configuration (ha ha)"
 	@echo "nvim           > neovim config & plugins"
 	@echo "ssh            > safe-ish ssh config"
@@ -17,13 +19,19 @@ help:
 	@echo ""
 	@echo "            mostly, i'm just lazy"
 
-all: git lftp npm nvim ssh sway tmux urxvt wallpapers zsh
+all: git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers zsh
 
 git:
 	@stow -t ~/ git
 
 lftp:
 	@stow -t ~/ lftp
+
+mpd:
+	@stow -t ~/ mpd
+
+ncmpcpp:
+	@stow -t ~/ ncmpcpp
 
 npm:
 	@mkdir -p ~/.cache/npm ~/.local/share/npm
