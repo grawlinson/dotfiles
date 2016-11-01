@@ -1,4 +1,4 @@
-.PHONY: help git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers zsh clean
+.PHONY: help git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers weechat zsh clean
 
 .DEFAULT: help
 
@@ -15,54 +15,58 @@ help:
 	@echo "tmux           > tmux config"
 	@echo "urxvt          > terminal colours & keyboard settings"
 	@echo "wallpapers     > system wallpapers"
+	@echo "weechat        > irc client ui/colour configuration"
 	@echo "zsh            > shell, aliases and cool stuff"
 	@echo ""
 	@echo "            mostly, i'm just lazy"
 
-all: git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers zsh
+all: git lftp mpd ncmpcpp npm nvim ssh sway tmux urxvt wallpapers weechat zsh
 
 git:
-	@stow -t ~/ git
+	@stow -t ~/ --no-folding git
 
 lftp:
-	@stow -t ~/ lftp
+	@stow -t ~/ --no-folding lftp
 
 mpd:
-	@stow -t ~/ mpd
+	@stow -t ~/ --no-folding mpd
 
 ncmpcpp:
-	@stow -t ~/ ncmpcpp
+	@stow -t ~/ --no-folding ncmpcpp
 
 npm:
 	@mkdir -p ~/.cache/npm ~/.local/share/npm
-	@stow -t ~/ npm
+	@stow -t ~/ --no-folding npm
 
 nvim:
-	@stow -t ~/ nvim
+	@stow -t ~/ --no-folding nvim
 	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@echo "Run :PlugInstall when nvim is first run!"
 
 ssh:
-	@stow -t ~/ ssh
+	@stow -t ~/ --no-folding ssh
 
 sway:
-	@stow -t ~/ sway
+	@stow -t ~/ --no-folding sway
 
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-	@stow -t ~/ tmux
+	@stow -t ~/ --no-folding tmux
 
 urxvt:
-	@stow -t ~/ urxvt
+	@stow -t ~/ --no-folding urxvt
 
 wallpapers:
-	@stow -t ~/ wallpapers
+	@stow -t ~/ --no-folding wallpapers
+
+weechat:
+	@stow -t ~/ --no-folding weechat
 
 zsh:
 	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 	git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
-	@stow -t ~/ zsh
+	@stow -t ~/ --no-folding zsh
 
 clean:
 	@stow -D git lftp npm nvim ssh sway tmux urxvt zsh
@@ -72,4 +76,5 @@ clean:
 		~/.config/nvim \
 		~/.config/sway \
 		~/.config/tmux \
+		~/.config/weechat \
 		~/.oh-my-zsh

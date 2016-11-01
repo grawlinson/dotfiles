@@ -12,6 +12,7 @@ sway           > minimal tiling wm for naughty computers
 tmux           > tmux config
 urxvt          > terminal colours & keyboard settings
 wallpapers     > system wallpapers
+weechat        > irc client ui/colour configuration
 zsh            > shell, aliases and cool stuff
 ```
 
