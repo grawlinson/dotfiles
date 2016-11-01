@@ -9,7 +9,7 @@ DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
 # Plugins
-plugins=(archlinux common-aliases git sudo ssh-agent rust)
+plugins=(archlinux common-aliases git sudo ssh-agent rust colored-man-pages)
 
 # ZSH-Completions
 plugins+=(zsh-completions)

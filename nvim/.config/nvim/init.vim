@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -37,6 +38,9 @@ colorscheme monokai
 syntax enable
 let g:load_doxygen_syntax=1
 
+" enable filetype plugins
+filetype plugin on
+
 "use system clipboard
 set clipboard+=unnamedplus
 
@@ -45,5 +49,3 @@ noremap <Up>    <NOP>
 noremap <Down>  <NOP>
 noremap <Left>  <NOP>
 noremap <Right> <NOP>
-
-" TODO: commenting plugin -> commentary/tcomment/nerdcommenter
