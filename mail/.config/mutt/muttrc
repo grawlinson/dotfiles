@@ -34,5 +34,6 @@ source ~/.config/mutt/layout
 source ~/.config/mutt/bindings
 source ~/.config/mutt/macros
 source ~/.config/mutt/hooks
+source ~/.config/mutt/notmuch
 
 #set read_only # set read-only when messing around with settings
