@@ -6,6 +6,7 @@ git            > global git config & aliases
 lftp           > sftp management
 mail           > mail config - mutt/mbsync
 mpd            > music player daemon config
+mpv            > who needs vlc? minimal video player
 ncmpcpp        > ncurses mpc++ ui/colour settings & playlists
 npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
