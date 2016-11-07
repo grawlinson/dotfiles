@@ -4,6 +4,7 @@ Description=Mailbox synchronization service for user %I
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/mbsync -Va
+ExecStartPost=/usr/bin/notmuch new
 User=%i
 StandardOutput=syslog
 StandardError=syslog
