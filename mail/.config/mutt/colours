@@ -1,0 +1,38 @@
+# sidebar colours
+color sidebar_new       blue  black # mailboxes containing new mail
+color sidebar_highlight black green # cursor to select mailbox
+color sidebar_indicator black blue  # current open mailbox
+color sidebar_divider   blue  black # divider between sidebar/index
+
+# general ui
+color status    blue    black   # colour for status line
+color indicator black  blue     # currently selected message
+color tree      cyan   default  # arrow in threads
+
+# mail colours
+color index magenta black ~N # new messages
+color index yellow  black ~O # old messages
+color index red     black ~D # to-be-deleted
+color index yellow  black ~P # self-mail
+
+# index
+color index_flags  red     black '~N'  # new messages
+color index_flags  red     black '~O'  # old messages
+color index_flags  yellow  black '~P'  # self-mail
+color index_flags  blue    black '~Q'  # messages replied to
+color index_author default black '.*'  # author colour
+color index_date   green   default     # date colour
+color index_label  default brightgreen # ???
+
+# quoting depths
+color quoted  green      default
+color quoted1 green      default
+color quoted2 blue       default
+color quoted3 blue       default
+
+# urls
+color body yellow black "(https|http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+
+# email addresses
+color body yellow black [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color body yellow black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"

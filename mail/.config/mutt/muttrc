@@ -1,0 +1,38 @@
+# conform to XDG base directory specification
+set header_cache = $XDG_CACHE_HOME/mutt/headers
+set message_cachedir = $XDG_DATA_HOME/mutt/messages
+set mailcap_path = $XDG_CONFIG_HOME/mutt/mailcap
+set record = $XDG_DATA_HOME/mutt/record/sent
+set tmpdir = $XDG_RUNTIME_DIR
+set certificate_file = $XDG_DATA_HOME/mutt/certificates
+# i like having a clean uncluttered $HOME, sue me
+
+# general
+set mail_check = 0 # mbsync used for mail synchronisation
+set timeout = 5    # wait 5s for user input
+set sleep_time = 0 # disable pausing
+set beep_new       # beep when new mail received
+
+# mailbox
+set mbox_type = Maildir        # mailbox format
+set folder    = ~/.mail        # mailbox storage directory
+set spoolfile = "+gmail/INBOX" # default mailbox
+
+# ssl configuration
+set ssl_starttls  # use STARTTLS if not set
+set ssl_force_tls # force TLS negotation
+
+# composing configuration
+set editor = "nvim +/^$ +nohlsearch" # place cursor after headers + turn off search highlighting
+set edit_headers                     # enable header editing when composing
+set mime_forward = ask-no            # ask if fwd msg as attachments
+
+# grab rest of the config
+source ~/.config/mutt/colours
+source ~/.config/mutt/mailboxes
+source ~/.config/mutt/layout
+source ~/.config/mutt/bindings
+source ~/.config/mutt/macros
+source ~/.config/mutt/hooks
+
+#set read_only # set read-only when messing around with settings

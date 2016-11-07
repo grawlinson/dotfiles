@@ -3,6 +3,7 @@
 ```
 git            > global git config & aliases
 lftp           > sftp management
+mail           > mail config - mutt/mbsync
 mpd            > music player daemon config
 ncmpcpp        > ncurses mpc++ ui/colour settings & playlists
 npm            > npm configuration (ha ha)
@@ -16,7 +17,7 @@ weechat        > irc client ui/colour configuration
 zsh            > shell, aliases and cool stuff
 ```
 
-`git clone git@github.com:grawlinson/dotfiles.git ~/.dotfiles`
+`git clone https://github.com/grawlinson/dotfiles.git ~/.dotfiles`
 
 Clone repository, then setup as desired.
 

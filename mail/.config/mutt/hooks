@@ -1,0 +1,5 @@
+# folder hooks for different accounts
+folder-hook gmail/*       source ~/.config/mutt/accounts/gmail
+folder-hook nullpointer/* source ~/.config/mutt/accounts/nullpointer
+
+source ~/.config/mutt/accounts/gmail # default account

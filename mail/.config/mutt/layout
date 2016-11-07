@@ -1,0 +1,35 @@
+# sidebar
+set sidebar_visible                           # show sidebar
+set sidebar_divider_char = "│"                # divider between sidebar + index
+set sidebar_width = 22                        # sidebar width
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N?" # display folder name + unread count
+
+# status bar
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# email composition
+ignore *                                # ignore all headers
+unhdr_order *
+unignore from: to: cc: date: subject:   # show only from/to/cc/date/subject
+hdr_order from: to: cc: date: subject:
+
+# pager
+set pager_context = 5                                # lines of context in pager
+set pager_index_lines = 10                           # lines of mailbox shown in pager
+set pager_stop                                       # don't go to next message at bottom of pager
+set smart_wrap                                       # attempt to wrap messages in pager
+set tilde                                            # vim-like end of msg
+unset markers                                        # no line-wrap markers
+alternative_order text/plain text/enriched text/html # display preference in order
+
+# index
+set date_format = "%y-%m-%d %H:%M"          # YY-MM-DD HH:SS
+set index_format = "[%Z]  %D  %-20.20F  %s" # [message status flags] date author_name subject
+set sort = threads                          # sort threaded mails
+set strict_threads                          # don't define threads only by subject
+set sort_aux = reverse-last-date-received   # most recent mails at top
+set sort_browser = reverse-date             # ?
+set uncollapse_jump                         # don't collapse on an unread message
+#set sort_re                                # thread based on regex
+#set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"

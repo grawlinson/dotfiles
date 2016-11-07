@@ -1,0 +1,12 @@
+mailboxes = +gmail/INBOX \
+            +gmail/Archive \
+            +gmail/Drafts \
+            +gmail/Sent \
+            +gmail/Spam \
+            +gmail/Trash \
+            +nullpointer/INBOX \
+            +nullpointer/Archive \
+            +nullpointer/Drafts \
+            +nullpointer/Sent \
+            +nullpointer/Spam \
+            +nullpointer/Trash

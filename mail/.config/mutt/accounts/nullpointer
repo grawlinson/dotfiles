@@ -1,0 +1,19 @@
+# clear previously defined mailboxes
+#unmailboxes *
+
+set mbox = "+nullpointer/Archive"
+set postponed = "+nullpointer/Drafts"
+set trash = "+nullpointer/Trash"
+set record = $XDG_DATA_HOME/mutt/record/sent
+
+set realname = "George Rawlinson"
+set from = "george@nullpointer.io"
+
+# smtp settings
+set smtp_pass = `pass mail/george@nullpointer.io`
+set smtp_url=smtp://$from@mail.gandi.net:587
+
+# nullpointer specific macros
+macro index A "<save-message>+nullpointer/Archive<enter>" "move message to the archive"
+macro index S "<save-message>+nullpointer/Spam<enter>" "mark message as spam"
+macro index D "<save-message>+nullpointer/Trash<enter>" "move message to the trash"

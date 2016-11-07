@@ -1,0 +1,9 @@
+# sidebar
+bind index,pager \Ck sidebar-prev # select previous folder
+bind index,pager \Cj sidebar-next # select next folder
+bind index,pager \Co sidebar-open # open selected folder
+bind index,pager B sidebar-toggle-visible # toggle sidebar
+
+# message - todo
+#bind index,pager k previous-line
+#bind index,pager j next-line

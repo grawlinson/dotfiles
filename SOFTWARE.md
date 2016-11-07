@@ -9,7 +9,7 @@
 *   ownCloud client
 *   KeepassX2
 *   PulseAudio+pavucontrol
-*   Fonts (infinality-bundle ibfonts-meta-extended)
+*   Fonts (ttf-dejavu, noto-fonts, powerline-fonts)
 *   LaTeX (texlive-most)
 
 ## Browsers
@@ -43,6 +43,7 @@
 
 ## Terminal
 
+*   termite
 *   weechat
 *   zsh
 *   screenfetch+scrot
@@ -51,5 +52,8 @@
 *   lftp
 *   nvim
 *   unzip
-*   rxvt-unicode
 *   tmux
+*   ncdu
+*   (neo)mutt
+*   notmuch
+*   isync (aka mbsync)

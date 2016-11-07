@@ -1,0 +1,123 @@
+# global config - applied to all channels
+Create Both
+Expunge Both
+SyncState *
+
+# gmail
+IMAPAccount gmail
+    Host imap.gmail.com
+    User george@rawlinson.net.nz
+    PassCmd "pass mail/george@rawlinson.net.nz" # get password from pass
+    AuthMechs LOGIN
+    SSLType IMAPS
+    CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# remote storage
+IMAPStore gmail-remote
+    Account gmail
+
+# local storage
+MaildirStore gmail-local
+    Path ~/.mail/gmail/ # must append slash to specify directory
+    Inbox ~/.mail/gmail/INBOX # place inbox inside mail dir
+
+# folders
+Channel gmail-inbox
+    Master :gmail-remote:INBOX
+    Slave :gmail-local:INBOX
+
+Channel gmail-archive
+    Master :gmail-remote:"[Gmail]/All Mail"
+    Slave :gmail-local:Archive
+
+Channel gmail-drafts
+    Master :gmail-remote:"[Gmail]/Drafts"
+    Slave :gmail-local:Drafts
+
+Channel gmail-sent
+    Master :gmail-remote:"[Gmail]/Sent Mail"
+    Slave :gmail-local:Sent
+
+Channel gmail-spam
+    Master :gmail-remote:"[Gmail]/Spam"
+    Slave :gmail-local:Spam
+
+Channel gmail-trash
+    Master :gmail-remote:"[Gmail]/Bin"
+    Slave :gmail-local:Trash
+
+# all folders except above
+Channel gmail-folders
+    Master :gmail-remote:
+    Slave :gmail-local:
+    Patterns * ![Gmail]* !INBOX !Archive !Drafts !Sent !Spam !Trash
+
+# group all channels, so they can be sync'd with one command `mbsync gmail`
+Group gmail
+    Channel gmail-trash
+    Channel gmail-inbox
+    Channel gmail-archive
+    Channel gmail-drafts
+    Channel gmail-sent
+    Channel gmail-spam
+    Channel gmail-folders
+
+# nullpointer
+IMAPAccount nullpointer
+    Host mail.gandi.net
+    User george@nullpointer.io
+    PassCmd "pass mail/george@nullpointer.io" # get password from pass
+    AuthMechs LOGIN
+    SSLType IMAPS
+    CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# remote storage
+IMAPStore nullpointer-remote
+    Account nullpointer
+
+# local storage
+MaildirStore nullpointer-local
+    Path ~/.mail/nullpointer/ # must append slash to specify directory
+    Inbox ~/.mail/nullpointer/INBOX # place inbox inside mail dir
+
+# folders
+Channel nullpointer-inbox
+    Master :nullpointer-remote:INBOX
+    Slave :nullpointer-local:INBOX
+
+Channel nullpointer-archive
+    Master :nullpointer-remote:Archive
+    Slave :nullpointer-local:Archive
+
+Channel nullpointer-drafts
+    Master :nullpointer-remote:Drafts
+    Slave :nullpointer-local:Drafts
+
+Channel nullpointer-sent
+    Master :nullpointer-remote:Sent
+    Slave :nullpointer-local:Sent
+
+Channel nullpointer-spam
+    Master :nullpointer-remote:Spam
+    Slave :nullpointer-local:Spam
+
+Channel nullpointer-trash
+    Master :nullpointer-remote:Trash
+    Slave :nullpointer-local:Trash
+
+# all folders except above
+Channel nullpointer-folders
+    Master :nullpointer-remote:
+    Slave :nullpointer-local:
+    Patterns * !INBOX !Archive !Drafts !Sent !Spam !Trash
+
+# group all channels, so they can be sync'd with one command `mbsync nullpointer`
+Group nullpointer
+    Channel nullpointer-trash
+    Channel nullpointer-inbox
+    Channel nullpointer-archive
+    Channel nullpointer-drafts
+    Channel nullpointer-sent
+    Channel nullpointer-spam
+    Channel nullpointer-folders
+
