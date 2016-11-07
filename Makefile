@@ -12,8 +12,8 @@ help:
 	@echo "nvim           > neovim config & plugins"
 	@echo "ssh            > safe-ish ssh config"
 	@echo "sway           > minimal tiling wm for naughty computers"
+	@echo "termite        > terminal colours & keyboard settings"
 	@echo "tmux           > tmux config"
-	@echo "urxvt          > terminal colours & keyboard settings"
 	@echo "wallpapers     > system wallpapers"
 	@echo "weechat        > irc client ui/colour configuration"
 	@echo "zsh            > shell, aliases and cool stuff"
@@ -50,12 +50,12 @@ ssh:
 sway:
 	@stow -t ~/ --no-folding sway
 
+termite:
+	@stow -t ~/ --no-folding termite
+
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 	@stow -t ~/ --no-folding tmux
-
-urxvt:
-	@stow -t ~/ --no-folding urxvt
 
 wallpapers:
 	@stow -t ~/ --no-folding wallpapers
@@ -66,6 +66,7 @@ weechat:
 zsh:
 	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 	git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
+	git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 	@stow -t ~/ --no-folding zsh
 
 clean:
