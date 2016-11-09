@@ -17,3 +17,7 @@ set smtp_url=smtp://$from@mail.gandi.net:587
 macro index A "<save-message>+nullpointer/Archive<enter>" "move message to the archive"
 macro index S "<save-message>+nullpointer/Spam<enter>" "mark message as spam"
 macro index D "<save-message>+nullpointer/Trash<enter>" "move message to the trash"
+# tag macros
+macro index \Ca "<tag-prefix-cond><save-message>+nullpointer/Archive<enter>" "move tagged messages to archive"
+macro index \Cs "<tag-prefix-cond><save-message>+nullpointer/Spam<enter>" "move tagged messages to spam"
+macro index \Cd "<tag-prefix-cond><save-message>+nullpointer/Trash<enter>" "move tagged messages to trash"

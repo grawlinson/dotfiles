@@ -17,3 +17,7 @@ set smtp_url=smtp://$from@smtp.gmail.com:587
 macro index A "<save-message>+gmail/Archive<enter>" "move message to the archive"
 macro index S "<save-message>+gmail/Spam<enter>" "mark message as spam"
 macro index D "<save-message>+gmail/Trash<enter>" "move message to the trash"
+# tag macros
+macro index \Ca "<tag-prefix-cond><save-message>+gmail/Archive<enter>" "move tagged messages to archive"
+macro index \Cs "<tag-prefix-cond><save-message>+gmail/Spam<enter>" "move tagged messages to spam"
+macro index \Cd "<tag-prefix-cond><save-message>+gmail/Trash<enter>" "move tagged messages to trash"
