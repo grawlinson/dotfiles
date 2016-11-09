@@ -3,6 +3,7 @@
 ```
 bin            > helpful shell scripts
 git            > global git config & aliases
+gnupg          > utilise gpg-agent for pgp crypto
 lftp           > sftp management
 mail           > mail config - mutt/mbsync/notmuch
 mpd            > music player daemon config
@@ -12,6 +13,7 @@ npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
 ssh            > safe-ish ssh config
 sway           > minimal tiling wm for naughty computers
+system         > linux-specific system configuration
 termite        > terminal colours & keyboard settings
 tmux           > tmux config
 wallpapers     > system wallpapers
