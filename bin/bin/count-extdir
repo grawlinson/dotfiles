@@ -1,0 +1,31 @@
+#!/bin/bash -e
+
+# Name    : count-extdir
+# Summary : Count number of files with specific extension in a given directory
+# Author  : George Rawlinson
+# Depends : error
+
+# check number of arguments - should be 2
+if [ ! $# -eq 2 ]; then
+    error "Expected 2 arguments: directory & extension"
+    exit 1
+fi
+
+# check if directory exists
+if [ ! -d "$1" ]; then
+    error "Directory does not exist"
+    exit 1
+fi
+
+# recursively find EXT in DIR
+find "$1" -type f -iname "*.$2" -printf '\n'| wc -l
+# find flags
+# type -f - limit to files
+# iname   - case insensitive
+# printf  - print new line after each result
+# |       - pipe results to next command
+# wc -l   - count number of new lines
+# Source : http://unix.stackexchange.com/questions/146760/count-files-in-a-directory-by-extension
+
+
+exit 0

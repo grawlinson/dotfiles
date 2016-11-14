@@ -1,0 +1,98 @@
+#!/bin/bash -e
+
+# Name    : import-photos
+# Summary : Import & sort photos in a given directory
+# Author  : George Rawlinson
+# Depends : error, exiftool, mktemp
+
+# constants
+readonly LIBRARY_DIRECTORY="$HOME/Photos" # location of photo library
+readonly PHOTO_EXTENSION="cr2"             # photo extension (Canon RAW)
+readonly PHOTO_LIMIT=9999                  # limit on photos to process
+readonly DEBUG_FLAG=0                      # used to test exiftool
+
+# check dependencies
+count=0
+for dependency in error exiftool mktemp
+do
+    # list missing dependencies
+    if [ ! -x "$(command -v $dependency)" ]; then
+        echo "$dependency missing"
+        count=$((count+1))
+    fi
+done
+
+# exit script if any dependencies missing
+if [ $count -ne 0 ]; then
+    exit 1
+fi
+
+# check number of arguments - should be 1
+if [ ! $# -eq 1 ]; then
+    error "Expected 1 argument: directory"
+    exit 1
+fi
+
+# get source directory
+source_directory="$1"
+
+# check if source directory exists
+if [ ! -d "$source_directory" ]; then
+    error "Directory does not exist"
+    exit 1
+fi
+
+# get number of photos
+num_photos=$(count-extdir "$source_directory" "$PHOTO_EXTENSION")
+
+# check numbers
+if [ "$num_photos" -gt "$PHOTO_LIMIT" ]; then
+    error "Too many photos to import"
+    exit 1
+elif [ "$num_photos" -eq 0 ]; then
+    echo "No photos to import"
+    exit 0
+fi
+
+# create temporary directory
+echo "Creating temporary directory"
+temporary_directory=$(mktemp -d -p /tmp photos.XXXXXX)
+# mktemp flags
+# u - dry run
+# d - make directory
+# p - make in given dir
+# photos.XXXXXX - create folder titled photos.XXXXXX where X = random characters
+
+# copy photos to temporary directory
+echo "Copying $num_photos photos to temporary directory"
+cp -R "$source_directory" "$temporary_directory"
+
+# import photos to library
+echo "Importing $num_photos photos"
+
+if [ "$DEBUG_FLAG" -eq 1 ]; then
+    # shellcheck disable=SC2016
+    exiftool -fileOrder DateTimeOriginal -recurse -verbose '-testname<${DateTimeOriginal}-${SerialNumber}%-.4nc.%e' -d "$LIBRARY_DIRECTORY"/%Y/%Y-%m-%d/%Y%m%d -ext cr2 "$temporary_directory"
+else
+    # shellcheck disable=SC2016
+    exiftool -fileOrder DateTimeOriginal -recurse -quiet '-FileName<${DateTimeOriginal}-${SerialNumber}%-.4nc.%e' -d "$LIBRARY_DIRECTORY"/%Y/%Y-%m-%d/%Y%m%d -ext cr2 "$temporary_directory"
+fi
+# exiftool flags
+# fileOrder DateTimeOriginal - before moving, sort in chronological order
+# recurse + verbose/quiet - recursive search + verbose/quiet output
+# testname/FileName - name of the output file (testname used for dry runs)
+    # DateTimeOriginal - YYYYMMDD (date format set in -d flag below)
+    # SerialNumber     - camera serial number
+    # -.4nc.%e         - sequential 4 digit number starting at 0001, followed by extension
+    # d - directory to save to
+        # - DIR/YYYY/YYYY-MM-DD/FileName (set using this flag + testname/FileName)
+# ext only match if ext=cr2 (Canon RAW)
+
+# delete temporary directory
+echo "Deleting temporary directory"
+rm -rf "$temporary_directory"
+
+# done!
+echo "All done!"
+
+exit 0

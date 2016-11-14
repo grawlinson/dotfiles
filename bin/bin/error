@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+# Name    : error
+# Summary : prints strings in red
+# Author  : George Rawlinson
+
+readonly RED='\033[0;31m'
+readonly RESET='\033[0m'
+printf "${RED}%s${RESET}\n" "$@"
+
+exit 0
