@@ -13,7 +13,7 @@ color tree      cyan   default  # arrow in threads
 color index magenta black ~N # new messages
 color index yellow  black ~O # old messages
 color index red     black ~D # to-be-deleted
-color index yellow  black ~P # self-mail
+color index cyan    black ~P # self-mail
 
 # index
 color index_flags  red     black '~N'  # new messages

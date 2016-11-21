@@ -22,10 +22,11 @@ set spoolfile = "+gmail/INBOX" # default mailbox
 set ssl_starttls  # use STARTTLS if not set
 set ssl_force_tls # force TLS negotation
 
-# composing configuration
+# composing/sending configuration
 set editor = "nvim +/^$ +nohlsearch" # place cursor after headers + turn off search highlighting
 set edit_headers                     # enable header editing when composing
 set mime_forward = ask-no            # ask if fwd msg as attachments
+set send_charset = "utf-8"           # charset to use when sending
 
 # grab rest of the config
 source ~/.config/mutt/colours

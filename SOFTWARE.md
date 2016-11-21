@@ -57,4 +57,5 @@
 *   (neo)mutt
 *   notmuch
 *   isync (aka mbsync)
+*   lynx
 *   urlview
