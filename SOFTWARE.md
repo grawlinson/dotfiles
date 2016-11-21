@@ -45,7 +45,7 @@
 
 *   termite
 *   weechat
-*   zsh
+*   zsh + zsh-completions
 *   screenfetch+scrot
 *   OpenSSH
 *   htop
@@ -57,3 +57,4 @@
 *   (neo)mutt
 *   notmuch
 *   isync (aka mbsync)
+*   urlview
