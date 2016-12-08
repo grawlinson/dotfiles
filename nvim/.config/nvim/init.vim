@@ -53,6 +53,11 @@ let g:load_doxygen_syntax=1
 " enable filetype plugins
 filetype plugin on
 
+" enable nvim-specific inccommand
+if has('nvim')
+    set inccommand=nosplit
+endif
+
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
