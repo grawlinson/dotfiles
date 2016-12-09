@@ -2,15 +2,30 @@
 
 ## General
 
-*   Calibre
-*   LibreOffice
-*   mpv
-*   Thunderbird
-*   ownCloud client
-*   KeepassX2
-*   PulseAudio+pavucontrol
-*   Fonts (ttf-dejavu, noto-fonts, powerline-fonts)
+*   calibre
+*   libreoffice
+*   owncloud-client
+*   keepassx2
+*   pulseaudio
+*   pavucontrol
 *   LaTeX (texlive-most)
+*   Gimp
+
+### Fonts
+
+*   noto-fonts-*
+*   powerline-fonts
+*   ttf-liberation
+*   ttf-dejavu
+*   ttf-droid
+*   ttf-hack
+*   ttf-inconsolata
+
+## Media
+
+*   mpv
+*   mpd
+*   ncmpcpp
 
 ## Browsers
 
@@ -22,17 +37,25 @@
 *   Reddit Enhancement Suite
 *   uBlock Origin
 *   Wappalyzer
+*   Greasemonkey
+*   Stylish
+*   Postman (Chrome)
+*   Insomnia (Chrome)
 
 ## Development
 
-*   postman
-*   insomnia
-*   atom
 *   nodejs
 *   npm
+*   go
+*   atom editor
+*   sublime text 3
 *   mongodb
 *   postgresql
-*   go
+*   valgrind
+*   cppcheck
+*   shellcheck
+*   doxygen
+*   docker
 
 ### Global NPM packages
 
@@ -46,14 +69,25 @@
 *   termite
 *   weechat
 *   zsh + zsh-completions
-*   screenfetch+scrot
-*   OpenSSH
+*   tmux
+*   openssh
+*   neovim
+
+### Utilities
+
+*   unzip
+*   unrar
+*   p7zip
+*   wget
+*   ncdu
+*   tree
+*   pass
+*   screenfetch
 *   htop
 *   lftp
-*   nvim
-*   unzip
-*   tmux
-*   ncdu
+
+### Mail
+
 *   (neo)mutt
 *   notmuch
 *   isync (aka mbsync)
