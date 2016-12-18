@@ -12,6 +12,7 @@ set mail_check = 0 # mbsync used for mail synchronisation
 set timeout = 5    # wait 5s for user input
 set sleep_time = 0 # disable pausing
 set beep_new       # beep when new mail received
+#set nomark_old     # don't mark unread new msgs as old
 
 # mailbox
 set mbox_type = Maildir        # mailbox format
