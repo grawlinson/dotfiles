@@ -64,7 +64,7 @@ Group gmail
 
 # nullpointer
 IMAPAccount nullpointer
-    Host mail.gandi.net
+    Host nullpointer.io
     User george@nullpointer.io
     PassCmd "pass mail/george@nullpointer.io" # get password from pass
     AuthMechs LOGIN
