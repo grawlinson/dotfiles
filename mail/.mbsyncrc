@@ -93,13 +93,13 @@ Channel nullpointer-drafts
     Master :nullpointer-remote:Drafts
     Slave :nullpointer-local:Drafts
 
+Channel nullpointer-junk
+    Master :nullpointer-remote:Junk
+    Slave :nullpointer-local:Junk
+
 Channel nullpointer-sent
     Master :nullpointer-remote:Sent
     Slave :nullpointer-local:Sent
-
-Channel nullpointer-spam
-    Master :nullpointer-remote:Spam
-    Slave :nullpointer-local:Spam
 
 Channel nullpointer-trash
     Master :nullpointer-remote:Trash
@@ -109,7 +109,7 @@ Channel nullpointer-trash
 Channel nullpointer-folders
     Master :nullpointer-remote:
     Slave :nullpointer-local:
-    Patterns * !INBOX !Archive !Drafts !Sent !Spam !Trash
+    Patterns * !INBOX !Archive !Drafts !Junk !Sent !Trash
 
 # group all channels, so they can be sync'd with one command `mbsync nullpointer`
 Group nullpointer
@@ -117,7 +117,7 @@ Group nullpointer
     Channel nullpointer-inbox
     Channel nullpointer-archive
     Channel nullpointer-drafts
+    Channel nullpointer-junk
     Channel nullpointer-sent
-    Channel nullpointer-spam
     Channel nullpointer-folders
 
