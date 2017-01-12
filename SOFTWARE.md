@@ -56,6 +56,7 @@
 *   shellcheck
 *   doxygen
 *   docker
+*   php code sniffer
 
 ### Global NPM packages
 
