@@ -7,6 +7,6 @@ mailboxes = +gmail/INBOX \
             +nullpointer/INBOX \
             +nullpointer/Archive \
             +nullpointer/Drafts \
+            +nullpointer/Junk \
             +nullpointer/Sent \
-            +nullpointer/Spam \
             +nullpointer/Trash
