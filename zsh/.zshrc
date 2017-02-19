@@ -9,7 +9,7 @@ DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
 # plugins
-plugins=(archlinux common-aliases git sudo ssh-agent rust colored-man-pages gpg-agent)
+plugins=(archlinux common-aliases git sudo ssh-agent rust colored-man-pages gpg-agent web-search)
 
 # zsh-completions
 autoload -U compinit && compinit
@@ -19,3 +19,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # source omz
 source $ZSH/oh-my-zsh.sh
+
+# increase zsh history
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+setopt EXTENDED_HISTORY
