@@ -15,6 +15,7 @@ Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
@@ -109,3 +110,10 @@ let g:deoplete#omni#functions.javascript = [
 set hidden
 let g:racer_cmd = "~/.cargo/bin/racer"
 let g:rustfmt_autosave = 1
+
+" ansible-vim
+let g:ansible_extra_syntaxes = "sh.vim ruby.vim"
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 1
+
