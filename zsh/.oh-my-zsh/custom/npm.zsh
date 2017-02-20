@@ -1,10 +1,11 @@
 # Install NPM packages globally without requiring sudo.
 # Source: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
 
-export NPM_CONFIG_USERCONFIG=$HOME/.config/npm/config
-export NPM_CONFIG_CACHE=$HOME/.cache/npm
+# Use XDG dirs
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
 export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
-export NPM_CONFIG_PREFIX=$HOME/.local/share/npm
+export NPM_CONFIG_PREFIX=$XDG_DATA_HOME/npm
 
 PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
 
