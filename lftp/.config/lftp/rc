@@ -14,7 +14,8 @@ set mirror:use-pget-n 30
 # Disable logging
 set cmd:save-cwd-history false
 set cmd:save-rl-history false
-set xfer:log false
+set log:enabled false
+set log:enabled/xfer false
 
 # Use colors.
 set color:use-color auto
