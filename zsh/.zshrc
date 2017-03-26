@@ -24,3 +24,6 @@ source $ZSH/oh-my-zsh.sh
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 setopt EXTENDED_HISTORY
+
+# reduce linux syscalls
+export TZ=:/etc/localtime

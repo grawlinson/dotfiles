@@ -23,9 +23,7 @@ zsh            > shell, aliases and cool stuff
 
 `git clone https://github.com/grawlinson/dotfiles.git ~/.dotfiles`
 
-Clone repository, then setup as desired.
-
-Look at [Makefile](Makefile), or use [GNU Stow][url-gnu-stow] directly.
+Clone repository, then setup as desired using [GNU Stow][url-gnu-stow].
 
 ## Further Reading
 
