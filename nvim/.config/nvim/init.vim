@@ -57,7 +57,9 @@ syntax enable
 let g:load_doxygen_syntax=1
 
 " enable filetype plugins
-filetype plugin on
+filetype plugin indent on
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType json setlocal tabstop=2 shiftwidth=2 expandtab
 
 " enable nvim-specific inccommand
 if has('nvim')
