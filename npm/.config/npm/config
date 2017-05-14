@@ -1,2 +1,8 @@
-# Save exact version instead of a 'loose' version.
+# save exact version instead of a version range
 save-exact=true
+
+# default `npm init` parameters
+init-author-name=George Rawlinson
+init-author-email=george@rawlinson.net.nz
+init-author-url=https://github.com/grawlinson
+init-license=MIT
