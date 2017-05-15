@@ -6,16 +6,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sickill/vim-monokai'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/sudoedit.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
 Plug 'vim-syntastic/syntastic'
-Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'pearofducks/ansible-vim'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
 call plug#end()
 
@@ -80,22 +74,8 @@ let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:syntastic_rust_checkers = ['rustc']
 
-" vim-go
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_list_type = "quickfix"
-
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#package_dot = 1
-let g:deoplete#sources#go#pointer = 1
-let g:deoplete#sources#go#use_cache = 1
-let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go'
 let g:tern_request_timeout = 1
 let g:tern_show_signature_in_pum = '0'
 set completeopt+=noinsert
@@ -107,17 +87,6 @@ let g:deoplete#omni#functions = {}
 let g:deoplete#omni#functions.javascript = [
     \ 'tern#Complete'
 \]
-
-" vim-racer
-set hidden
-let g:racer_cmd = "~/.cargo/bin/racer"
-let g:rustfmt_autosave = 1
-
-" ansible-vim
-let g:ansible_extra_syntaxes = "sh.vim ruby.vim"
-let g:ansible_attribute_highlight = "ob"
-let g:ansible_name_highlight = 'd'
-let g:ansible_extra_keywords_highlight = 1
 
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
