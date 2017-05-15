@@ -9,7 +9,7 @@ DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
 # plugins
-plugins=(archlinux common-aliases git sudo ssh-agent rust colored-man-pages gpg-agent web-search)
+plugins=(common-aliases git sudo ssh-agent gpg-agent)
 
 # zsh-completions
 autoload -U compinit && compinit
