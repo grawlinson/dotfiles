@@ -3,7 +3,6 @@ call plug#begin()
 " plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'sickill/vim-monokai'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'vim-syntastic/syntastic'
@@ -38,15 +37,15 @@ noremap <Down>  <NOP>
 noremap <Left>  <NOP>
 noremap <Right> <NOP>
 
-" vim-airline - monokai + powerline
-let g:airline_theme='base16_monokai'
+" vim-airline - solarized + powerline
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 set laststatus=2
 
-" configure vim-monokai with syntax highlighting
-colorscheme monokai
+" enable syntax highlighting
 syntax enable
 let g:load_doxygen_syntax=1
 
