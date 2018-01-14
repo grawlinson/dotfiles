@@ -6,8 +6,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'vim-syntastic/syntastic'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
 call plug#end()
@@ -72,20 +70,6 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:syntastic_rust_checkers = ['rustc']
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-let g:tern_request_timeout = 1
-let g:tern_show_signature_in_pum = '0'
-set completeopt+=noinsert
-set completeopt+=noselect
-set completeopt-=preview
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-let g:deoplete#omni#functions = {}
-let g:deoplete#omni#functions.javascript = [
-    \ 'tern#Complete'
-\]
 
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
