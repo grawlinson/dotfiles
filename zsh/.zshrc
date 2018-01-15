@@ -9,7 +9,7 @@ DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
 
 # plugins
-plugins=(common-aliases git sudo ssh-agent gpg-agent)
+plugins=(common-aliases git sudo gpg-agent ssh-agent)
 
 # zsh-completions
 autoload -U compinit && compinit
