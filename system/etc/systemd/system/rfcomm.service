@@ -1,0 +1,13 @@
+[Unit]
+Description=rfcomm service
+After=bluetooth.service
+Requires=bluetooth.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/rfcomm bind 0 <device>
+ExecStop=/usr/bin/rfcomm release 0
+
+[Install]
+WantedBy=multi-user.target
