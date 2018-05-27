@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/sudoedit.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -73,4 +74,4 @@ let g:syntastic_rust_checkers = ['rustc']
 
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/usr/bin/python'
