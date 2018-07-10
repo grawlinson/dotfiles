@@ -1,4 +1,5 @@
 {
+	"buildDir": "/home/george/.cache/yay",
 	"editor": "",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
@@ -7,9 +8,9 @@
 	"tarbin": "bsdtar",
 	"redownload": "no",
 	"rebuild": "no",
-	"answerclean": "",
-	"answerdiff": "",
-	"answeredit": "",
+	"answerclean": "All",
+	"answerdiff": "None",
+	"answeredit": "None",
 	"answerupgrade": "",
 	"gitbin": "git",
 	"gpgbin": "gpg",
