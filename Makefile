@@ -14,7 +14,6 @@ help:
 	@echo "sway           > minimal tiling wm for naughty computers"
 	@echo "termite        > terminal colours & keyboard settings"
 	@echo "tmux           > tmux config"
-	@echo "wallpapers     > system wallpapers"
 	@echo "weechat        > irc client ui/colour configuration"
 	@echo "zsh            > shell, aliases and cool stuff"
 	@echo ""
@@ -56,9 +55,6 @@ termite:
 tmux:
 	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 	@stow -t ~/ --no-folding tmux
-
-wallpapers:
-	@stow -t ~/ --no-folding wallpapers
 
 weechat:
 	@stow -t ~/ --no-folding weechat
