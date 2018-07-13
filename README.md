@@ -16,7 +16,6 @@ sway           > minimal tiling wm for naughty computers
 system         > linux-specific system configuration
 termite        > terminal colours & keyboard settings
 tmux           > tmux config
-wallpapers     > system wallpapers
 weechat        > irc client ui/colour configuration
 zsh            > shell, aliases and cool stuff
 ```
