@@ -3,73 +3,72 @@ Create Both
 Expunge Both
 SyncState *
 
-# gmail
-IMAPAccount gmail
-    Host imap.gmail.com
+# rawlinson
+IMAPAccount rawlinson
+    Host imap.nullpointer.io
     User george@rawlinson.net.nz
     PassCmd "pass mail/george@rawlinson.net.nz" # get password from pass
     AuthMechs LOGIN
     SSLType IMAPS
-    CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 # remote storage
-IMAPStore gmail-remote
-    Account gmail
+IMAPStore rawlinson-remote
+    Account rawlinson
 
 # local storage
-MaildirStore gmail-local
-    Path ~/.mail/gmail/ # must append slash to specify directory
-    Inbox ~/.mail/gmail/INBOX # place inbox inside mail dir
+MaildirStore rawlinson-local
+    Path ~/.mail/rawlinson/ # must append slash to specify directory
+    Inbox ~/.mail/rawlinson/INBOX # place inbox inside mail dir
 
 # folders
-Channel gmail-inbox
-    Master :gmail-remote:INBOX
-    Slave :gmail-local:INBOX
+Channel rawlinson-inbox
+    Master :rawlinson-remote:INBOX
+    Slave :rawlinson-local:INBOX
 
-Channel gmail-archive
-    Master :gmail-remote:"[Gmail]/All Mail"
-    Slave :gmail-local:Archive
+Channel rawlinson-archive
+    Master :rawlinson-remote:Archive
+    Slave :rawlinson-local:Archive
 
-Channel gmail-drafts
-    Master :gmail-remote:"[Gmail]/Drafts"
-    Slave :gmail-local:Drafts
+Channel rawlinson-drafts
+    Master :rawlinson-remote:Drafts
+    Slave :rawlinson-local:Drafts
 
-Channel gmail-sent
-    Master :gmail-remote:"[Gmail]/Sent Mail"
-    Slave :gmail-local:Sent
+Channel rawlinson-junk
+    Master :rawlinson-remote:Junk
+    Slave :rawlinson-local:Junk
 
-Channel gmail-spam
-    Master :gmail-remote:"[Gmail]/Spam"
-    Slave :gmail-local:Spam
+Channel rawlinson-sent
+    Master :rawlinson-remote:Sent
+    Slave :rawlinson-local:Sent
 
-Channel gmail-trash
-    Master :gmail-remote:"[Gmail]/Bin"
-    Slave :gmail-local:Trash
+Channel rawlinson-trash
+    Master :rawlinson-remote:Trash
+    Slave :rawlinson-local:Trash
 
 # all folders except above
-Channel gmail-folders
-    Master :gmail-remote:
-    Slave :gmail-local:
-    Patterns * ![Gmail]* !INBOX !Archive !Drafts !Sent !Spam !Trash
+Channel rawlinson-folders
+    Master :rawlinson-remote:
+    Slave :rawlinson-local:
+    Patterns * !INBOX !Archive !Drafts !Junk !Sent !Trash
 
-# group all channels, so they can be sync'd with one command `mbsync gmail`
-Group gmail
-    Channel gmail-trash
-    Channel gmail-inbox
-    Channel gmail-archive
-    Channel gmail-drafts
-    Channel gmail-sent
-    Channel gmail-spam
-    Channel gmail-folders
+# group all channels, so they can be sync'd with one command `mbsync rawlinson`
+Group rawlinson
+    Channel rawlinson-trash
+    Channel rawlinson-inbox
+    Channel rawlinson-archive
+    Channel rawlinson-drafts
+    Channel rawlinson-junk
+    Channel rawlinson-sent
+    Channel rawlinson-folders
+
 
 # nullpointer
 IMAPAccount nullpointer
-    Host nullpointer.io
+    Host imap.nullpointer.io
     User george@nullpointer.io
     PassCmd "pass mail/george@nullpointer.io" # get password from pass
     AuthMechs LOGIN
     SSLType IMAPS
-    CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 # remote storage
 IMAPStore nullpointer-remote
