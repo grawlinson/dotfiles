@@ -1,14 +1,25 @@
 # add ~/bin & /usr/local/bin to $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# location of oh-my-zsh installation
-export ZSH=$HOME/.oh-my-zsh
+# oh-my-zsh related directories
+export ZSH=/usr/share/oh-my-zsh
+export ZSH_CACHE_DIR=$XDG_CACHE_HOME/oh-my-zsh
+export ZSH_CUSTOM=$XDG_CONFIG_HOME/oh-my-zsh/custom
+
+# create cache & plugin directories if they don't exist
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir -p $ZSH_CACHE_DIR
+fi
+# Custom plugins
+if [[ ! -d $ZSH_CUSTOM ]]; then
+  mkdir -p $ZSH_CUSTOM
+  fi
+
+# disable automatic updates
+DISABLE_AUTO_UPDATE=true
 
 # theme
 ZSH_THEME="ys"
-
-# automatically update oh-my-zsh without being prompted
-DISABLE_UPDATE_PROMPT=true
 
 # plugins
 plugins=(
