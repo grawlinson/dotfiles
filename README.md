@@ -1,6 +1,6 @@
 # dotfiles & system setup
 
-```shell
+```
 arch-linux     > arch specific dotfiles
 bin            > helpful shell scripts
 git            > global git config & aliases
