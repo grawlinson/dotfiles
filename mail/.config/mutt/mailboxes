@@ -1,9 +1,9 @@
-mailboxes = +gmail/INBOX \
-            +gmail/Archive \
-            +gmail/Drafts \
-            +gmail/Sent \
-            +gmail/Spam \
-            +gmail/Trash \
+mailboxes = +rawlinson/INBOX \
+            +rawlinson/Archive \
+            +rawlinson/Drafts \
+            +rawlinson/Sent \
+            +rawlinson/Junk \
+            +rawlinson/Trash \
             +nullpointer/INBOX \
             +nullpointer/Archive \
             +nullpointer/Drafts \

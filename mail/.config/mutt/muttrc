@@ -17,7 +17,7 @@ set beep_new       # beep when new mail received
 # mailbox
 set mbox_type = Maildir        # mailbox format
 set folder    = ~/.mail        # mailbox storage directory
-set spoolfile = "+gmail/INBOX" # default mailbox
+set spoolfile = "+rawlinson/INBOX" # default mailbox
 
 # ssl configuration
 set ssl_starttls  # use STARTTLS if not set
