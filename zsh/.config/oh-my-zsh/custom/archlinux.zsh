@@ -1,3 +1,4 @@
+# todo: similar aliases for yay
 # pacaur aliases
 if (( $+commands[pacaur] )); then
   alias paupg='pacaur -Syua'

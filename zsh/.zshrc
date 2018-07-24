@@ -10,10 +10,9 @@ export ZSH_CUSTOM=$XDG_CONFIG_HOME/oh-my-zsh/custom
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir -p $ZSH_CACHE_DIR
 fi
-# Custom plugins
 if [[ ! -d $ZSH_CUSTOM ]]; then
   mkdir -p $ZSH_CUSTOM
-  fi
+fi
 
 # disable automatic updates
 DISABLE_AUTO_UPDATE=true
