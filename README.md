@@ -1,7 +1,6 @@
-# dotfiles & system setup
+# dotfiles
 
 ```
-arch-linux     > arch specific dotfiles
 bin            > helpful shell scripts
 git            > global git config & aliases
 gnupg          > utilise gpg-agent for pgp crypto
@@ -14,7 +13,6 @@ npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
 ssh            > safe-ish ssh config
 sway           > minimal tiling wm for naughty computers
-system         > linux-specific system configuration
 termite        > terminal colours & keyboard settings
 tmux           > tmux config
 weechat        > irc client ui/colour configuration
@@ -23,19 +21,14 @@ zsh            > shell, aliases and cool stuff
 
 `git clone https://github.com/grawlinson/dotfiles.git ~/.dotfiles`
 
-Clone repository, then setup as desired using [GNU Stow][url-gnu-stow].
+Clone repository, then setup as desired using [GNU Stow][url-gnu-stow]. I prefer using the `--no-folding` flag with `stow`.
 
 ## Caveats
 
 These dotfiles assume the computer is set up in a specific way. I recommend
 using Ansible or other tools (Chef, Puppet, etc) to automatically provision
-your computer the way you like it.
-
-The following should really be Ansible playbooks:
-
-- mail (setup systemd units)
-- ssh (add ssh keys & server aliases)
-- system (modify files out of `$HOME`)
+your computer the way you like it. I've started migrating things that can
+be automated to my [ansible-archlinux][url-gh-ansible-archlinux] repository.
 
 ## Further Reading
 
@@ -51,3 +44,4 @@ The MIT License ([MIT](LICENSE.md))
 [url-invergo-stow]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
 [url-mozilla-ssh]: https://wiki.mozilla.org/Security/Guidelines/OpenSSH
 [url-secure-shell]: https://stribika.github.io/2015/01/04/secure-secure-shell.html
+[url-gh-ansible-archlinux]: https://github.com/grawlinson/ansible-archlinux
