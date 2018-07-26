@@ -1,0 +1,2 @@
+# hide specific ssh information
+ssh/.ssh/config.d
