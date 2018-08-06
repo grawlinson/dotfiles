@@ -4,5 +4,5 @@ alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
 # Connect to remote tmux session via SSH
 ssh-tmux(){
-	ssh -t $@ "tmux attach || tmux new";
+	ssh -t "$@" "tmux attach || tmux new";
 }
