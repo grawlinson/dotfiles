@@ -1,0 +1,51 @@
+directory: ~/Music
+
+paths:
+ default: $albumartist/$album%aunique{}/$track - $title
+ singleton: Non-Album/$artist/$title
+ comp: Various Artists/$album%aunique{}/$track - $title
+ albumtype:soundtrack: Various Artists/$album/$track - $title
+
+plugins: scrub fetchart zero mbsync convert discogs
+
+threaded: yes
+
+import:
+ write: yes
+ copy: yes
+ move: no
+ resume: yes
+ quiet_fallback: skip
+
+convert:
+ auto: yes
+ embed: no
+ command: ffmpeg -i $source -y -vn -aq 0 $dest
+ extension: mp3
+ never_convert_lossy_files: yes
+
+autotag: yes
+strong_rec_thresh: 0.1  # match 90% or better for auto-import
+
+art_filename: cover
+
+replace:
+ '[\\/]': ''
+ '^\.': ''
+ '[\x00-\x1f]': ''
+ '[<>:"\?\*\|]': ''
+ '\.$': ''
+ '\s+$': ''
+
+scrub:
+ auto: yes
+
+fetchart:
+ auto: yes
+ maxwidth: 1000
+ cautious: yes
+ cover_names: cover front art album folder
+ sources: itunes amazon *
+
+zero:
+ fields: comments lyrics encoder

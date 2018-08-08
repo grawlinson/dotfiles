@@ -2,13 +2,13 @@
 
 ```
 bin            > helpful shell scripts
+darktable      > mostly just filters
 git            > global git config & aliases
 gnupg          > utilise gpg-agent for pgp crypto
 lftp           > sftp management
 mail           > mail config - mutt/mbsync/notmuch
-mpd            > music player daemon config
 mpv            > who needs vlc? minimal video player
-ncmpcpp        > ncurses mpc++ ui/colour settings & playlists
+music          > music config - mpd, ncmpcpp, beets
 npm            > npm configuration (ha ha)
 nvim           > neovim config & plugins
 ssh            > safe-ish ssh config
@@ -21,7 +21,8 @@ zsh            > shell, aliases and cool stuff
 
 `git clone https://github.com/grawlinson/dotfiles.git ~/.dotfiles`
 
-Clone repository, then setup as desired using [GNU Stow][url-gnu-stow]. I prefer using the `--no-folding` flag with `stow`.
+Clone repository, then setup as desired using [GNU Stow][url-gnu-stow].
+I prefer using the `--no-folding` flag with `stow`.
 
 ## Caveats
 
