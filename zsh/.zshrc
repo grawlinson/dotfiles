@@ -25,8 +25,6 @@ plugins=(
     common-aliases
     git
     sudo
-    gpg-agent
-    ssh-agent
     docker
 )
 
