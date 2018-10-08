@@ -45,3 +45,4 @@ export TZ=:/etc/localtime
 # ensure system is aware of browser/editor preference
 export BROWSER="firefox-nightly"
 export EDITOR="nvim"
+
