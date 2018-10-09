@@ -6,7 +6,7 @@ paths:
  comp: Various Artists/$album%aunique{}/$track - $title
  albumtype:soundtrack: Various Artists/$album/$track - $title
 
-plugins: scrub fetchart zero mbsync convert discogs
+plugins: scrub fetchart zero mbsync convert discogs duplicates
 
 threaded: yes
 
