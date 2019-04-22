@@ -22,10 +22,9 @@ ZSH_THEME="ys"
 
 # plugins
 plugins=(
-    common-aliases
+    ripgrep
     git
     sudo
-    docker
 )
 
 # zsh-completions
