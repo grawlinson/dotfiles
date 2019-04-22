@@ -37,7 +37,3 @@ source $ZSH/oh-my-zsh.sh
 # reduce linux syscalls
 export TZ=:/etc/localtime
 
-# ensure system is aware of browser/editor preference
-export BROWSER="firefox-nightly"
-export EDITOR="nvim"
-
