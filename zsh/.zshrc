@@ -1,8 +1,29 @@
 # add ~/bin & /usr/local/bin to $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# OS detection
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    # Support for XDG Base Directories
+    export XDG_DATA_HOME="${HOME}/.local/share"
+    export XDG_CONFIG_HOME="${HOME}/.config"
+    export XDG_CACHE_HOME="${HOME}/.cache"
+    export XDG_RUNTIME_DIR="/tmp"
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    # Linux/GNU
+    # reduce linux syscalls
+    export TZ=:/etc/localtime
+
+    # Path to your oh-my-zsh installation.
+    export ZSH=/usr/share/oh-my-zsh
+else
+    printf "Unknown OS detected: %s\n" "$OSTYPE"
+fi
+
 # oh-my-zsh related directories
-export ZSH=/usr/share/oh-my-zsh
 export ZSH_CACHE_DIR=$XDG_CACHE_HOME/oh-my-zsh
 export ZSH_CUSTOM=$XDG_CONFIG_HOME/oh-my-zsh/custom
 
@@ -32,8 +53,4 @@ autoload -U compinit && compinit
 
 # source omz
 source $ZSH/oh-my-zsh.sh
-
-
-# reduce linux syscalls
-export TZ=:/etc/localtime
 
