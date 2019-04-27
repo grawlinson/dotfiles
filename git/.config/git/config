@@ -1,6 +1,7 @@
 [user]
 	email = george@rawlinson.net.nz
 	name = George Rawlinson
+	signingkey = 25EA6900D9EA5EBC
 
 [core]
 	# if $EDITOR not set, use this as editor
@@ -27,3 +28,5 @@
 	# source - https://github.com/ngerakines/commitment
 	yolo = !git commit -m \"$(curl -s whatthecommit.com/index.txt)\"
 
+[commit]
+	gpgsign = true
