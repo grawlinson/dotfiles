@@ -32,6 +32,7 @@ set send_charset = "utf-8"           # charset to use when sending
 # grab rest of the config
 source ~/.config/mutt/colours
 source ~/.config/mutt/mailboxes
+source ~/.config/mutt/gpg
 source ~/.config/mutt/layout
 source ~/.config/mutt/bindings
 source ~/.config/mutt/macros
