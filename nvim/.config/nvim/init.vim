@@ -8,6 +8,7 @@ Plug 'chrisbra/sudoedit.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -75,3 +76,10 @@ let g:syntastic_rust_checkers = ['rustc']
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python'
+
+" golang support preferences
+let g:go_def_mode = 'gopls'
+let g:go_fmt_command = "goimports"
+let g:go_def_mapping_enabled = 1 " hijacks gd
+
+nnoremap <leader>gd :GoDocBrowser<CR>
