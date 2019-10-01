@@ -1,6 +1,9 @@
 # clear previously defined mailboxes
 #unmailboxes *
 
+# clear previously defined headers
+unmy_hdr *
+
 set mbox = "+nullpointer/Archive"
 set postponed = "+nullpointer/Drafts"
 set trash = "+nullpointer/Trash"
@@ -15,9 +18,9 @@ set smtp_url=smtp://$from@smtp.nullpointer.io:587
 
 # nullpointer specific macros
 macro index A "<save-message>+nullpointer/Archive<enter>" "move message to the archive"
-macro index S "<save-message>+nullpointer/Spam<enter>" "mark message as spam"
+macro index S "<save-message>+nullpointer/Junk<enter>" "mark message as spam"
 macro index D "<save-message>+nullpointer/Trash<enter>" "move message to the trash"
 # tag macros
 macro index \Ca "<tag-prefix-cond><save-message>+nullpointer/Archive<enter>" "move tagged messages to archive"
-macro index \Cs "<tag-prefix-cond><save-message>+nullpointer/Spam<enter>" "move tagged messages to spam"
+macro index \Cs "<tag-prefix-cond><save-message>+nullpointer/Junk<enter>" "move tagged messages to spam"
 macro index \Cd "<tag-prefix-cond><save-message>+nullpointer/Trash<enter>" "move tagged messages to trash"

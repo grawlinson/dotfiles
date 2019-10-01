@@ -28,6 +28,7 @@ set editor = "nvim +/^$ +nohlsearch" # place cursor after headers + turn off sea
 set edit_headers                     # enable header editing when composing
 set mime_forward = ask-no            # ask if fwd msg as attachments
 set send_charset = "utf-8"           # charset to use when sending
+unset user_agent                     # remove UA header
 
 # grab rest of the config
 source ~/.config/mutt/colours
