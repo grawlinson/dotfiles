@@ -1,0 +1,73 @@
+#
+# local zsh file
+#
+
+# weechat
+if command -v weechat &> /dev/null; then
+  # Conform to XDG base directory specifications
+  export WEECHAT_HOME="$HOME/.config/weechat"
+fi
+
+# tmux
+if command -v tmux &> /dev/null; then
+  # Conform to XDG base directory specifications
+  export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+  alias tmux='tmux -f ~/.config/tmux/tmux.conf'
+
+  # Connect to remote tmux session via SSH
+  ssh-tmux(){
+    ssh -t "$@" "tmux attach || tmux new";
+  }
+fi
+
+# rust/cargo
+if command -v cargo &> /dev/null; then
+  # Add cargo binary directory to $PATH
+  path+=("$HOME/.cargo/bin")
+fi
+
+# ruby
+if command -v ruby &> /dev/null; then
+  # Add rubygem binary directory to $PATH
+  path+=("$(ruby -e "puts Gem.user_dir")/bin")
+fi
+
+# python-pip
+if command -v pip &> /dev/null; then
+  # Add pip2/3 binary directory to $PATH
+  path+=("$HOME/.local/bin")
+fi
+
+# nodejs/npm
+if command -v npm &> /dev/null; then
+  # Install NPM packages globally without requiring sudo.
+  # Source: https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
+
+  # Use XDG dirs
+  export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+  export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
+  export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
+  export NPM_CONFIG_PREFIX=$XDG_DATA_HOME/npm
+
+  # add npm binary directory to $PATH
+  path+=("$NPM_CONFIG_PREFIX/bin")
+
+  # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
+  unset MANPATH # delete if you already modified MANPATH elsewhere in your config
+  MANPATH="$NPM_CONFIG_PREFIX/share/man:$(manpath)"
+  export MANPATH
+fi
+
+# go
+if command -v go &> /dev/null; then
+  # Export $GOPATH
+  export GOPATH="$HOME/go"
+
+  # Add Go binary directory to $PATH
+  path+=("$GOPATH/bin")
+fi
+
+# finally, export $PATH
+export PATH
+
+# vim: ft=zsh expandtab tabstop=2 shiftwidth=2
