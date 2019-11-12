@@ -1,10 +1,10 @@
 # conform to XDG base directory specification
-set header_cache = $XDG_CACHE_HOME/mutt/headers
-set message_cachedir = $XDG_DATA_HOME/mutt/messages
-set mailcap_path = $XDG_CONFIG_HOME/mutt/mailcap
-set record = $XDG_DATA_HOME/mutt/record/sent
+set header_cache = $XDG_CACHE_HOME/neomutt/headers
+set message_cachedir = $XDG_DATA_HOME/neomutt/messages
+set mailcap_path = $XDG_CONFIG_HOME/neomutt/mailcap
+set record = $XDG_DATA_HOME/neomutt/record/sent
 set tmpdir = $XDG_RUNTIME_DIR
-set certificate_file = $XDG_DATA_HOME/mutt/certificates
+set certificate_file = $XDG_DATA_HOME/neomutt/certificates
 # i like having a clean uncluttered $HOME, sue me
 
 # general
@@ -31,14 +31,14 @@ set send_charset = "utf-8"           # charset to use when sending
 unset user_agent                     # remove UA header
 
 # grab rest of the config
-source ~/.config/mutt/colours
-source ~/.config/mutt/mailboxes
-source ~/.config/mutt/gpg
-source ~/.config/mutt/layout
-source ~/.config/mutt/bindings
-source ~/.config/mutt/macros
-source ~/.config/mutt/hooks
-source ~/.config/mutt/notmuch
+source ~/.config/neomutt/colours
+source ~/.config/neomutt/mailboxes
+source ~/.config/neomutt/gpg
+source ~/.config/neomutt/layout
+source ~/.config/neomutt/bindings
+source ~/.config/neomutt/macros
+source ~/.config/neomutt/hooks
+source ~/.config/neomutt/notmuch
 
 #set read_only # set read-only when messing around with settings
 # vim: syntax=muttrc
