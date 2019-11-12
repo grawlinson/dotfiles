@@ -1,12 +1,3 @@
-mailboxes = +rawlinson/INBOX \
-            +rawlinson/Archive \
-            +rawlinson/Drafts \
-            +rawlinson/Sent \
-            +rawlinson/Junk \
-            +rawlinson/Trash \
-            +nullpointer/INBOX \
-            +nullpointer/Archive \
-            +nullpointer/Drafts \
-            +nullpointer/Junk \
-            +nullpointer/Sent \
-            +nullpointer/Trash
+source 'find ~/.mail -name cur -printf "mailboxes \"%h\"\n"|sort|'
+
+# vim: syntax=muttrc

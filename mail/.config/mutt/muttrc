@@ -41,3 +41,4 @@ source ~/.config/mutt/hooks
 source ~/.config/mutt/notmuch
 
 #set read_only # set read-only when messing around with settings
+# vim: syntax=muttrc
