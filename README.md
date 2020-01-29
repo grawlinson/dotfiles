@@ -1,6 +1,7 @@
 # dotfiles
 
 ```
+alacritty      > yet another terminal emulator
 bin            > helpful shell scripts
 darktable      > mostly just filters
 git            > global git config & aliases
