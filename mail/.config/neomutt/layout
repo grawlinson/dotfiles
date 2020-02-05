@@ -6,7 +6,7 @@ set sidebar_format = "%B%?F? [%F]?%* %?N?%N?" # display folder name + unread cou
 
 # status bar
 set status_chars  = " *%A"
-set status_format = "───[ Folder: %f ]───[%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+set status_format = "───[ Folder: %f ]───[ %m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
 
 # email composition
 ignore *                                # ignore all headers
