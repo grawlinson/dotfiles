@@ -76,7 +76,6 @@ bind index,pager E sidebar-toggle-virtual
 virtual-mailboxes                              \
     "INBOX"     "notmuch://?query=tag:INBOX"   \
     "Unread"    "notmuch://?query=tag:unread"  \
-    "Archive"   "notmuch://?query=tag:archive" \
     "Sent"      "notmuch://?query=tag:sent"        # sets up queries for virtual folders
 
 # Replace some tags with icons
