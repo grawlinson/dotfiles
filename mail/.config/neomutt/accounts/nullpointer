@@ -14,7 +14,7 @@ set from = "george@nullpointer.io"
 
 # smtp settings
 set smtp_pass = `pass mail/george@nullpointer.io`
-set smtp_url=smtp://$from@smtp.nullpointer.io:587
+set smtp_url = smtp://$from@smtp.nullpointer.io:587
 
 # nullpointer specific macros
 macro index A "<save-message>+nullpointer/Archive<enter>" "move message to the archive"
