@@ -30,3 +30,12 @@
 
 [commit]
 	gpgsign = true
+
+[sendemail]
+	smtpserver = smtp.nullpointer.io
+	smtpuser = george@rawlinson.net.nz
+	smtpencryption = tls
+	smtpserverport = 587
+	annotate = true
+[format]
+	signoff = true
