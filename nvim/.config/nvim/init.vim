@@ -9,6 +9,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 
 call plug#end()
 
@@ -61,6 +62,9 @@ if has('nvim')
 endif
 
 " syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -73,6 +77,8 @@ let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_sh_checkers = ['shellcheck']
+let g:syntastic_zsh_checkers = ['zsh']
 
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
