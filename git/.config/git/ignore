@@ -36,3 +36,7 @@ Thumbs.db
 
 # logs
 *.log
+
+# signatures
+*.asc
+*.sig
