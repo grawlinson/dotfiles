@@ -18,6 +18,11 @@ if command -v tmux &> /dev/null; then
   ssh-tmux(){
     ssh -t "$@" "tmux attach || tmux new";
   }
+
+  # auto-start tmux
+  if [ -z "${TMUX}" ]; then
+    tmux -f ~/.config/tmux/tmux.conf
+  fi
 fi
 
 # rust/cargo
