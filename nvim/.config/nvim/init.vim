@@ -10,6 +10,7 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -76,7 +77,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_sh_checkers = ['shellcheck']
 let g:syntastic_zsh_checkers = ['zsh']
 
