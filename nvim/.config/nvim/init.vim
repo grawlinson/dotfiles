@@ -56,6 +56,7 @@ filetype plugin indent on
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType json setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType PKGBUILD setlocal tabstop=2 shiftwidth=2 expandtab
 
 " enable nvim-specific inccommand
 if has('nvim')
