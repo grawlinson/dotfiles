@@ -1,8 +1,10 @@
 # sidebar
 set sidebar_visible                           # show sidebar
 set sidebar_divider_char = "│"                # divider between sidebar + index
-set sidebar_width = 22                        # sidebar width
+set sidebar_width = 25                        # sidebar width
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N?" # display folder name + unread count
+set sidebar_short_path = yes                  # truncate folder name
+set mail_check_stats                          # calculate message counts
 
 # status bar
 set status_chars  = " *%A"
