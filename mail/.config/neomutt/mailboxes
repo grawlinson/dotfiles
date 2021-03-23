@@ -1,6 +1,4 @@
-named-mailboxes ":: rawlinson" ~/.config/neomutt/div_rw
 mailboxes `find ~/.mail/rawlinson -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
-named-mailboxes ":: nullpointer" ~/.config/neomutt/div_np
-mailboxes `find ~/.mail/nullpointer -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
+#mailboxes `find ~/.mail/accountname -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
 
 # vim: syntax=muttrc
