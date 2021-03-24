@@ -63,15 +63,6 @@ if command -v npm &> /dev/null; then
   export MANPATH
 fi
 
-# go
-if command -v go &> /dev/null; then
-  # Export $GOPATH
-  export GOPATH="$HOME/Code/go"
-
-  # Add Go binary directory to $PATH
-  path+=("$GOPATH/bin")
-fi
-
 # finally, export $PATH
 export PATH
 
