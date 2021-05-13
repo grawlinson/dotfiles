@@ -32,7 +32,7 @@
 	gpgsign = true
 
 [sendemail]
-	smtpserver = smtp.nullpointer.io
+	smtpserver = smtp.little.kiwi
 	smtpuser = george@rawlinson.net.nz
 	smtpencryption = tls
 	smtpserverport = 587
