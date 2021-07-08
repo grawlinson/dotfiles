@@ -33,6 +33,7 @@ fi
 # rust/cargo
 if command -v cargo &> /dev/null; then
   # Add cargo binary directory to $PATH
+  # this assumes CARGO_HOME is unset
   path+=("$HOME/.cargo/bin")
 fi
 
