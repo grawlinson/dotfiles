@@ -1,4 +1,7 @@
+named-mailboxes ":: rawlinson" "+rawlinson/INBOX"
 mailboxes `find ~/.mail/rawlinson -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
+named-mailboxes ":: archlinux" "+archlinux/INBOX"
+mailboxes `find ~/.mail/archlinux -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
 #mailboxes `find ~/.mail/accountname -type d -name cur | sort | sed -e 's:/cur/*$::' -e 's/ /\\ /g' | tr '\n' ' '`
 
 # vim: syntax=muttrc

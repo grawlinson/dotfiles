@@ -1,5 +1,6 @@
 # folder hooks for different accounts
 folder-hook rawlinson/*   source ~/.config/neomutt/accounts/rawlinson
+folder-hook archlinux/*   source ~/.config/neomutt/accounts/archlinux
 #folder-hook accountname/* source ~/.config/neomutt/accounts/accountname
 
 source ~/.config/neomutt/accounts/rawlinson # default account

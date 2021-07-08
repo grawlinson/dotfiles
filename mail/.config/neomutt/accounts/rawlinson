@@ -11,6 +11,7 @@ set record = "+rawlinson/Sent"
 
 set realname = "George Rawlinson"
 set from = "george@rawlinson.net.nz"
+set signature = "~/.config/neomutt/signature"
 
 # smtp settings
 set smtp_pass = `pass mail/george@rawlinson.net.nz`

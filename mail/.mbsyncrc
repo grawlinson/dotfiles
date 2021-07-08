@@ -3,7 +3,9 @@ Create Both
 Expunge Both
 SyncState *
 
-# rawlinson
+#
+# george@rawlinson.net.nz
+#
 IMAPAccount rawlinson
     Host imap.little.kiwi
     User george@rawlinson.net.nz
@@ -60,3 +62,63 @@ Group rawlinson
     Channel rawlinson-junk
     Channel rawlinson-sent
     Channel rawlinson-folders
+
+#
+# grawlinson@archlinux.org
+#
+IMAPAccount archlinux
+    Host mail.archlinux.org
+    User grawlinson
+    PassCmd "pass mail/grawlinson@archlinux.org" # get password from pass
+    AuthMechs LOGIN
+    SSLType IMAPS
+
+# remote storage
+IMAPStore archlinux-remote
+    Account archlinux
+
+# local storage
+MaildirStore archlinux-local
+    Path ~/.mail/archlinux/ # must append slash to specify directory
+    Inbox ~/.mail/archlinux/INBOX # place inbox inside mail dir
+
+# folders
+Channel archlinux-inbox
+    Far :archlinux-remote:INBOX
+    Near :archlinux-local:INBOX
+
+Channel archlinux-archive
+    Far :archlinux-remote:Archive
+    Near :archlinux-local:Archive
+
+Channel archlinux-drafts
+    Far :archlinux-remote:Drafts
+    Near :archlinux-local:Drafts
+
+Channel archlinux-junk
+    Far :archlinux-remote:Junk
+    Near :archlinux-local:Junk
+
+Channel archlinux-sent
+    Far :archlinux-remote:Sent
+    Near :archlinux-local:Sent
+
+Channel archlinux-trash
+    Far :archlinux-remote:Trash
+    Near :archlinux-local:Trash
+
+# all folders except above
+Channel archlinux-folders
+    Far :archlinux-remote:
+    Near :archlinux-local:
+    Patterns * !INBOX !Archive !Drafts !Junk !Sent !Trash
+
+# group all channels, so they can be sync'd with one command `mbsync archlinux`
+Group archlinux
+    Channel archlinux-trash
+    Channel archlinux-inbox
+    Channel archlinux-archive
+    Channel archlinux-drafts
+    Channel archlinux-junk
+    Channel archlinux-sent
+    Channel archlinux-folders

@@ -31,7 +31,7 @@ path=.mail
 [user]
 name=George Rawlinson
 primary_email=george@rawlinson.net.nz
-other_email=george@nullpointer.io;
+other_email=george@nullpointer.io;grawlinson@archlinux.org
 
 # Configuration for "notmuch new"
 #
