@@ -2,6 +2,11 @@
 # local zsh file
 #
 
+# PKGBUILD checker
+if command -v shellcheck &> /dev/null; then
+  alias pbcheck='SHELLCHECK_OPTS="-e SC2034 -e SC2164 -e SC2154 -e SC2148" shellcheck'
+fi
+
 # weechat
 if command -v weechat &> /dev/null; then
   # Conform to XDG base directory specifications
@@ -28,6 +33,7 @@ fi
 # rust/cargo
 if command -v cargo &> /dev/null; then
   # Add cargo binary directory to $PATH
+  # this assumes CARGO_HOME is unset
   path+=("$HOME/.cargo/bin")
 fi
 
@@ -61,15 +67,6 @@ if command -v npm &> /dev/null; then
   unset MANPATH # delete if you already modified MANPATH elsewhere in your config
   MANPATH="$NPM_CONFIG_PREFIX/share/man:$(manpath)"
   export MANPATH
-fi
-
-# go
-if command -v go &> /dev/null; then
-  # Export $GOPATH
-  export GOPATH="$HOME/Code/go"
-
-  # Add Go binary directory to $PATH
-  path+=("$GOPATH/bin")
 fi
 
 # finally, export $PATH

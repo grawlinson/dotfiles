@@ -3,9 +3,11 @@ Create Both
 Expunge Both
 SyncState *
 
-# rawlinson
+#
+# george@rawlinson.net.nz
+#
 IMAPAccount rawlinson
-    Host imap.nullpointer.io
+    Host imap.little.kiwi
     User george@rawlinson.net.nz
     PassCmd "pass mail/george@rawlinson.net.nz" # get password from pass
     AuthMechs LOGIN
@@ -22,33 +24,33 @@ MaildirStore rawlinson-local
 
 # folders
 Channel rawlinson-inbox
-    Master :rawlinson-remote:INBOX
-    Slave :rawlinson-local:INBOX
+    Far :rawlinson-remote:INBOX
+    Near :rawlinson-local:INBOX
 
 Channel rawlinson-archive
-    Master :rawlinson-remote:Archive
-    Slave :rawlinson-local:Archive
+    Far :rawlinson-remote:Archive
+    Near :rawlinson-local:Archive
 
 Channel rawlinson-drafts
-    Master :rawlinson-remote:Drafts
-    Slave :rawlinson-local:Drafts
+    Far :rawlinson-remote:Drafts
+    Near :rawlinson-local:Drafts
 
 Channel rawlinson-junk
-    Master :rawlinson-remote:Junk
-    Slave :rawlinson-local:Junk
+    Far :rawlinson-remote:Junk
+    Near :rawlinson-local:Junk
 
 Channel rawlinson-sent
-    Master :rawlinson-remote:Sent
-    Slave :rawlinson-local:Sent
+    Far :rawlinson-remote:Sent
+    Near :rawlinson-local:Sent
 
 Channel rawlinson-trash
-    Master :rawlinson-remote:Trash
-    Slave :rawlinson-local:Trash
+    Far :rawlinson-remote:Trash
+    Near :rawlinson-local:Trash
 
 # all folders except above
 Channel rawlinson-folders
-    Master :rawlinson-remote:
-    Slave :rawlinson-local:
+    Far :rawlinson-remote:
+    Near :rawlinson-local:
     Patterns * !INBOX !Archive !Drafts !Junk !Sent !Trash
 
 # group all channels, so they can be sync'd with one command `mbsync rawlinson`
@@ -61,62 +63,62 @@ Group rawlinson
     Channel rawlinson-sent
     Channel rawlinson-folders
 
-
-# nullpointer
-IMAPAccount nullpointer
-    Host imap.nullpointer.io
-    User george@nullpointer.io
-    PassCmd "pass mail/george@nullpointer.io" # get password from pass
+#
+# grawlinson@archlinux.org
+#
+IMAPAccount archlinux
+    Host mail.archlinux.org
+    User grawlinson
+    PassCmd "pass mail/grawlinson@archlinux.org" # get password from pass
     AuthMechs LOGIN
     SSLType IMAPS
 
 # remote storage
-IMAPStore nullpointer-remote
-    Account nullpointer
+IMAPStore archlinux-remote
+    Account archlinux
 
 # local storage
-MaildirStore nullpointer-local
-    Path ~/.mail/nullpointer/ # must append slash to specify directory
-    Inbox ~/.mail/nullpointer/INBOX # place inbox inside mail dir
+MaildirStore archlinux-local
+    Path ~/.mail/archlinux/ # must append slash to specify directory
+    Inbox ~/.mail/archlinux/INBOX # place inbox inside mail dir
 
 # folders
-Channel nullpointer-inbox
-    Master :nullpointer-remote:INBOX
-    Slave :nullpointer-local:INBOX
+Channel archlinux-inbox
+    Far :archlinux-remote:INBOX
+    Near :archlinux-local:INBOX
 
-Channel nullpointer-archive
-    Master :nullpointer-remote:Archive
-    Slave :nullpointer-local:Archive
+Channel archlinux-archive
+    Far :archlinux-remote:Archive
+    Near :archlinux-local:Archive
 
-Channel nullpointer-drafts
-    Master :nullpointer-remote:Drafts
-    Slave :nullpointer-local:Drafts
+Channel archlinux-drafts
+    Far :archlinux-remote:Drafts
+    Near :archlinux-local:Drafts
 
-Channel nullpointer-junk
-    Master :nullpointer-remote:Junk
-    Slave :nullpointer-local:Junk
+Channel archlinux-junk
+    Far :archlinux-remote:Junk
+    Near :archlinux-local:Junk
 
-Channel nullpointer-sent
-    Master :nullpointer-remote:Sent
-    Slave :nullpointer-local:Sent
+Channel archlinux-sent
+    Far :archlinux-remote:Sent
+    Near :archlinux-local:Sent
 
-Channel nullpointer-trash
-    Master :nullpointer-remote:Trash
-    Slave :nullpointer-local:Trash
+Channel archlinux-trash
+    Far :archlinux-remote:Trash
+    Near :archlinux-local:Trash
 
 # all folders except above
-Channel nullpointer-folders
-    Master :nullpointer-remote:
-    Slave :nullpointer-local:
+Channel archlinux-folders
+    Far :archlinux-remote:
+    Near :archlinux-local:
     Patterns * !INBOX !Archive !Drafts !Junk !Sent !Trash
 
-# group all channels, so they can be sync'd with one command `mbsync nullpointer`
-Group nullpointer
-    Channel nullpointer-trash
-    Channel nullpointer-inbox
-    Channel nullpointer-archive
-    Channel nullpointer-drafts
-    Channel nullpointer-junk
-    Channel nullpointer-sent
-    Channel nullpointer-folders
-
+# group all channels, so they can be sync'd with one command `mbsync archlinux`
+Group archlinux
+    Channel archlinux-trash
+    Channel archlinux-inbox
+    Channel archlinux-archive
+    Channel archlinux-drafts
+    Channel archlinux-junk
+    Channel archlinux-sent
+    Channel archlinux-folders

@@ -1,0 +1,27 @@
+# clear previously defined mailboxes
+#unmailboxes *
+
+# clear previously defined headers
+unmy_hdr *
+
+set mbox = "+archlinux/Archive"
+set postponed = "+archlinux/Drafts"
+set trash = "+archlinux/Trash"
+set record = "+archlinux/Sent"
+
+set realname = "George Rawlinson"
+set from = "grawlinson@archlinux.org"
+set signature = "~/.config/neomutt/signature"
+
+# smtp settings
+set smtp_pass = `pass mail/grawlinson@archlinux.org`
+set smtp_url = smtps://$from@mail.archlinux.org
+
+# archlinux specific macros
+macro index A "<save-message>+archlinux/Archive<enter>" "move message to the archive"
+macro index S "<save-message>+archlinux/Junk<enter>" "mark message as spam"
+macro index D "<save-message>+archlinux/Trash<enter>" "move message to the trash"
+# tag macros
+macro index \Ca "<tag-prefix-cond><save-message>+archlinux/Archive<enter>" "move tagged messages to archive"
+macro index \Cs "<tag-prefix-cond><save-message>+archlinux/Junk<enter>" "move tagged messages to spam"
+macro index \Cd "<tag-prefix-cond><save-message>+archlinux/Trash<enter>" "move tagged messages to trash"
