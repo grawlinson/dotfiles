@@ -84,10 +84,3 @@ let g:syntastic_zsh_checkers = ['zsh']
 " python host paths
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python'
-
-" golang support preferences
-let g:go_def_mode = 'gopls'
-let g:go_fmt_command = "goimports"
-let g:go_def_mapping_enabled = 1 " hijacks gd
-
-nnoremap <leader>gd :GoDocBrowser<CR>
