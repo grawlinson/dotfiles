@@ -29,8 +29,7 @@ I prefer using the `--no-folding` flag with `stow`.
 
 These dotfiles assume the computer is set up in a specific way. I recommend
 using Ansible or other tools (Chef, Puppet, etc) to automatically provision
-your computer the way you like it. I've started migrating things that can
-be automated to my [ansible-archlinux][url-gh-ansible-archlinux] repository.
+your computer the way you like it.
 
 ## Further Reading
 
@@ -46,4 +45,3 @@ The MIT License ([MIT](LICENSE.md))
 [url-invergo-stow]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
 [url-mozilla-ssh]: https://wiki.mozilla.org/Security/Guidelines/OpenSSH
 [url-secure-shell]: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-[url-gh-ansible-archlinux]: https://github.com/grawlinson/ansible-archlinux
