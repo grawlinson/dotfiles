@@ -1,13 +1,26 @@
+# explicitly set $TERM for sparkly colourful terminal
+env:
+  TERM: screen-256color
+
 # Font
 font:
-  size: 11
-  normal:
-    family: DejaVu Sans Mono
+  size: 14
+  use_thin_strokes: true
 
+shell:
+  program: /bin/zsh
+
+cursor:
+  style: "Block"
+  blinking: "On"
 
 # Window
 window:
-    startup_mode: Fullscreen
+  padding:
+    x: 10
+    y: 10
+  decorations: buttonless
+  startup_mode: maximized
 
 # Base16 Solarized Dark 256 - alacritty color config
 # Ethan Schoonover (modified by aramisgithub)
