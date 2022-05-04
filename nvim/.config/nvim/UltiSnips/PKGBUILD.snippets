@@ -1,0 +1,132 @@
+priority -50
+
+snippet maint "Maintainer tag" i
+`#!/usr/bin/env bash
+echo "# Maintainer:" $(cat /etc/makepkg.conf $XDG_CONFIG_HOME/pacman/makepkg.conf 2>/dev/null | grep -oP '^PACKAGER="\K[^"]+')
+`
+endsnippet
+
+snippet base "Metadata" i
+pkgname=$1
+pkgver=${2:1}
+pkgrel=${3:1}
+pkgdesc='$4'
+arch=(${5:'any'})
+url='$6'
+license=($7)
+depends=($8)
+makedepends=($9)
+checkdepends=($10)
+optdepends=($11)
+options=('!lto')
+source=("$pkgname::git+$12")
+b2sums=('SKIP')
+endsnippet
+
+snippet prep "prepare" i
+prepare() {
+  cd "$pkgname"
+
+  $1
+}
+endsnippet
+
+snippet ver "pkgver" i
+pkgver() {
+  cd "$pkgname"$1
+
+  git describe --tags | sed 's/^v//'
+
+  printf 'r%s.g%s' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+endsnippet
+
+snippet build "build" i
+build() {
+  cd "$pkgname"
+
+  $1
+}
+endsnippet
+
+snippet chk "check" i
+check() {
+  cd "$pkgname"
+
+  $1
+}
+endsnippet
+
+snippet pkg "package" i
+package() {
+  cd "$pkgname"
+
+  $1
+}
+endsnippet
+
+## General package() snippets
+snippet pkgbin "Package binary" i
+  # binary
+  install -vDm755 -t "$pkgdir/usr/bin" $1
+endsnippet
+
+snippet pkgdoc "Package documentation" i
+  # documentation
+  install -vDm644 -t "$pkgdir/usr/share/doc/$pkgname" $1
+endsnippet
+
+snippet pkglic "Package license" i
+  # license
+  install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" $1
+endsnippet
+
+## Go specific
+snippet goprep "Prepare (Go)" i
+  # create directory for build output
+  mkdir build
+
+  # download dependencies
+  go mod download
+endsnippet
+
+snippet gobuild "Build (Go)" i
+  # set Go flags
+  export CGO_CPPFLAGS="${CPPFLAGS}"
+  export CGO_CFLAGS="${CFLAGS}"
+  export CGO_CXXFLAGS="${CXXFLAGS}"
+
+  go build -v \
+    -trimpath \
+    -buildmode=pie \
+    -mod=readonly \
+    -modcacherw \
+    -ldflags "-linkmode external -extldflags ${LDFLAGS}" \
+    -o build \
+    .
+endsnippet
+
+snippet gochk "Check (Go)" i
+  go test -v ./...
+endsnippet
+
+## Rust specific
+snippet rustprep "Prepare (Rust)" i
+  # download dependencies
+  cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
+endsnippet
+
+snippet rustbuild "Build (Rust)" i
+  cargo build --frozen --release --all-features
+endsnippet
+
+snippet rustchk "Check (Rust)" i
+  cargo test --frozen --all-features
+endsnippet
+
+snippet rustpkg "Package (Rust)" i
+  # binary
+  install -vDm755 -t "$pkgdir/usr/bin" "target/release/$pkgname"
+endsnippet
+
+# vim: tabstop=2 shiftwidth=2 expandtab
