@@ -2,6 +2,7 @@
 
 ```
 alacritty      > yet another terminal emulator
+archlinux      > just makepkg.conf for now
 bin            > helpful shell scripts
 darktable      > mostly just filters
 git            > global git config & aliases
