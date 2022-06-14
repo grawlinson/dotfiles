@@ -8,6 +8,7 @@
 	editor = nvim
 	# fix whitespace issues
 	whitespace = fix, blank-at-eol, blank-at-eof, space-before-tab, trailing-space
+  pager = delta
 
 [color]
 	# automatically color output, except when piping
@@ -43,12 +44,14 @@
 # use git-delta for diff/log
 [delta]
 	navigate = true
+	light = false
 
 [interactive]
 	diffFilter = delta --color-only
 
-[pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
