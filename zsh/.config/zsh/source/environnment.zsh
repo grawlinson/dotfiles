@@ -2,7 +2,7 @@
 # environment variables
 #
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # locale
 export LANG='en_NZ.UTF-8'
