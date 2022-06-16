@@ -1,5 +1,9 @@
 priority -50
 
+#
+# General snippets
+#
+
 snippet maint "Maintainer tag" i
 `#!/usr/bin/env bash
 echo "# Maintainer:" $(cat /etc/makepkg.conf $XDG_CONFIG_HOME/pacman/makepkg.conf 2>/dev/null | grep -oP '^PACKAGER="\K[^"]+')
@@ -13,11 +17,11 @@ pkgrel=${3:1}
 pkgdesc='$4'
 arch=(${5:'any'})
 url='$6'
-license=($7)
-depends=($8)
-makedepends=($9)
-checkdepends=($10)
-optdepends=($11)
+license=('$7')
+depends=('$8')
+makedepends=('$9')
+checkdepends=('$10')
+optdepends=('$11')
 options=('!lto')
 source=("$pkgname::git+$12")
 b2sums=('SKIP')
@@ -31,11 +35,24 @@ prepare() {
 }
 endsnippet
 
+snippet patch "patch files" i
+`#!/usr/bin/env bash
+source PKGBUILD
+for s in "${source[@]}"; do 
+  if [[ "$s" == *".patch"* ]]; then
+    printf "patch --strip=1 --input=\"\$srcdir/%s\"\n" "${s%::*}"
+  fi
+done
+`
+endsnippet
+
 snippet ver "pkgver" i
 pkgver() {
   cd "$pkgname"$1
 
   git describe --tags | sed 's/^v//'
+
+  git describe --tags | sed -e 's/^v//' -e 's/-/.r/' -e 's/-/./g'
 
   printf 'r%s.g%s' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
@@ -65,7 +82,6 @@ package() {
 }
 endsnippet
 
-## General package() snippets
 snippet pkgbin "Package binary" i
   # binary
   install -vDm755 -t "$pkgdir/usr/bin" $1
@@ -81,8 +97,10 @@ snippet pkglic "Package license" i
   install -vDm644 -t "$pkgdir/usr/share/licenses/$pkgname" $1
 endsnippet
 
-## Go specific
-snippet goprep "Prepare (Go)" i
+#
+# Go specific
+#
+snippet prepgo "Prepare (Go)" i
   # create directory for build output
   mkdir build
 
@@ -90,7 +108,7 @@ snippet goprep "Prepare (Go)" i
   go mod download
 endsnippet
 
-snippet gobuild "Build (Go)" i
+snippet buildgo "Build (Go)" i
   # set Go flags
   export CGO_CPPFLAGS="${CPPFLAGS}"
   export CGO_CFLAGS="${CFLAGS}"
@@ -106,27 +124,60 @@ snippet gobuild "Build (Go)" i
     .
 endsnippet
 
-snippet gochk "Check (Go)" i
+snippet chkgo "Check (Go)" i
   go test -v ./...
 endsnippet
 
-## Rust specific
-snippet rustprep "Prepare (Rust)" i
+#
+# Rust specific
+#
+snippet preprs "Prepare (Rust)" i
   # download dependencies
   cargo fetch --locked --target "$CARCH-unknown-linux-gnu"
 endsnippet
 
-snippet rustbuild "Build (Rust)" i
+snippet buildrs "Build (Rust)" i
   cargo build --frozen --release --all-features
 endsnippet
 
-snippet rustchk "Check (Rust)" i
+snippet chkrs "Check (Rust)" i
   cargo test --frozen --all-features
 endsnippet
 
-snippet rustpkg "Package (Rust)" i
+snippet pkgrs "Package (Rust)" i
   # binary
   install -vDm755 -t "$pkgdir/usr/bin" "target/release/$pkgname"
+endsnippet
+
+#
+# Common Lisp specific
+#
+snippet clname "Package Name (Common Lisp)" i
+_pkgname="${pkgname#cl-}"
+endsnippet
+
+snippet vercl "Version (Common Lisp)" i
+  # first known commit to receive latest version
+  local _pkgver='$1'
+  local _pkgcommit='$2'
+
+  git tag "$_pkgver" "$_pkgcommit"
+
+  git describe --tags | sed -e 's/^v//' -e 's/-/.r/' -e 's/-/./g'
+endsnippet
+
+snippet chkcl "Check (Common Lisp)" i
+  sbcl --script ../run-tests.lisp
+endsnippet
+
+snippet pkgcl "Package (Common Lisp)" i
+  # library
+  install -vDm644 -t "$pkgdir/usr/share/common-lisp/source/$_pkgname" ./*.{lisp,asd}
+  find . -mindepth 1 -maxdepth 1 -type d -not -name '.git' -exec cp -vr -t "$pkgdir/usr/share/common-lisp/source/$_pkgname" {} \+
+  cp -vr \
+    directories \
+    files ./*.asd \
+    "$pkgdir/usr/share/common-lisp/source/$_pkgname"
 endsnippet
 
 # vim: tabstop=2 shiftwidth=2 expandtab
