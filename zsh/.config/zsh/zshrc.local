@@ -74,4 +74,7 @@ fi
 # finally, export $PATH
 export PATH
 
+# ❤️ zmv
+autoload -Uz zmv
+
 # vim: ft=zsh expandtab tabstop=2 shiftwidth=2
