@@ -182,4 +182,19 @@ snippet pkgcl "Package (Common Lisp)" i
     "$pkgdir/usr/share/common-lisp/source/$_pkgname"
 endsnippet
 
+#
+# Python specific
+#
+snippet buildpy "Build (Python)" i
+  python -m build --wheel --no-isolation
+endsnippet
+
+snippet chkpy "Check (Python)" i
+  pytest -v
+endsnippet
+
+snippet pkgpy "Package (Python)" i
+  python -m installer --destdir="$pkgdir" dist/*.whl
+endsnippet
+
 # vim: tabstop=2 shiftwidth=2 expandtab
