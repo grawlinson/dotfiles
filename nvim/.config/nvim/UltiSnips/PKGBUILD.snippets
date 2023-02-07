@@ -113,13 +113,15 @@ snippet buildgo "Build (Go)" i
   export CGO_CPPFLAGS="${CPPFLAGS}"
   export CGO_CFLAGS="${CFLAGS}"
   export CGO_CXXFLAGS="${CXXFLAGS}"
+  export GOPATH="${srcdir}"
 
   go build -v \
-    -trimpath \
     -buildmode=pie \
     -mod=readonly \
     -modcacherw \
-    -ldflags "-linkmode external -extldflags ${LDFLAGS}" \
+    -ldflags "-compressdwarf=false \
+    -linkmode external \
+    -extldflags ${LDFLAGS}" \
     -o build \
     .
 endsnippet
