@@ -39,6 +39,7 @@
 	smtpencryption = tls
 	smtpserverport = 587
 	annotate = true
+
 [format]
 	signoff = true
 
