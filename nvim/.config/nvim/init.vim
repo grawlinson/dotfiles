@@ -2,6 +2,7 @@ call plug#begin()
 
 " plugins
 Plug 'SirVer/ultisnips'
+Plug 'theacodes/witchhazel'
 
 call plug#end()
 
@@ -33,6 +34,10 @@ noremap <Right> <NOP>
 " enable syntax highlighting
 syntax enable
 let g:load_doxygen_syntax=1
+
+" theme
+" set termguicolors
+" colorscheme witchhazel-hypercolor
 
 " enable filetype plugins
 filetype plugin indent on
