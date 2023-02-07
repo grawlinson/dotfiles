@@ -40,10 +40,10 @@ if command -v cargo &> /dev/null; then
 fi
 
 # ruby
-if command -v ruby &> /dev/null; then
-  # Add rubygem binary directory to $PATH
-  path+=("$(ruby -e "puts Gem.user_dir")/bin")
-fi
+#if command -v ruby &> /dev/null; then
+#  # Add rubygem binary directory to $PATH
+#  path+=("$(ruby -e "puts Gem.user_dir")/bin")
+#fi
 
 # python-pip
 if command -v pip &> /dev/null; then
