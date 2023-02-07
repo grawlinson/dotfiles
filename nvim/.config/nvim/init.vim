@@ -3,6 +3,7 @@ call plug#begin()
 " plugins
 Plug 'SirVer/ultisnips'
 Plug 'theacodes/witchhazel'
+Plug 'NoahTheDuke/vim-just'
 
 call plug#end()
 
